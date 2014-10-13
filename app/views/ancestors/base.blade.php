@@ -25,7 +25,7 @@
 		
 		@yield('header')
 
-		<article id="mainContainer" class="large-9 small-8 columns">
+		<article id="mainContainer">
 			@yield('body')
 		</article>
 
