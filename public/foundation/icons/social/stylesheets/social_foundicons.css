@@ -1,0 +1,148 @@
+/* font-face */
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("../fonts/social_foundicons.eot");
+  src: url("../fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), url("../fonts/social_foundicons.woff") format("woff"), url("../fonts/social_foundicons.ttf") format("truetype"), url("../fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon_social-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon_social-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+.foundicon_social-thumb-up:before {
+  content: "\f000";
+}
+
+.foundicon_social-thumb-down:before {
+  content: "\f001";
+}
+
+.foundicon_social-rss:before {
+  content: "\f002";
+}
+
+.foundicon_social-facebook:before {
+  content: "\f003";
+}
+
+.foundicon_social-twitter:before {
+  content: "\f004";
+}
+
+.foundicon_social-pinterest:before {
+  content: "\f005";
+}
+
+.foundicon_social-github:before {
+  content: "\f006";
+}
+
+.foundicon_social-path:before {
+  content: "\f007";
+}
+
+.foundicon_social-linkedin:before {
+  content: "\f008";
+}
+
+.foundicon_social-dribbble:before {
+  content: "\f009";
+}
+
+.foundicon_social-stumble-upon:before {
+  content: "\f00a";
+}
+
+.foundicon_social-behance:before {
+  content: "\f00b";
+}
+
+.foundicon_social-reddit:before {
+  content: "\f00c";
+}
+
+.foundicon_social-google-plus:before {
+  content: "\f00d";
+}
+
+.foundicon_social-youtube:before {
+  content: "\f00e";
+}
+
+.foundicon_social-vimeo:before {
+  content: "\f00f";
+}
+
+.foundicon_social-flickr:before {
+  content: "\f010";
+}
+
+.foundicon_social-slideshare:before {
+  content: "\f011";
+}
+
+.foundicon_social-picassa:before {
+  content: "\f012";
+}
+
+.foundicon_social-skype:before {
+  content: "\f013";
+}
+
+.foundicon_social-steam:before {
+  content: "\f014";
+}
+
+.foundicon_social-instagram:before {
+  content: "\f015";
+}
+
+.foundicon_social-foursquare:before {
+  content: "\f016";
+}
+
+.foundicon_social-delicious:before {
+  content: "\f017";
+}
+
+.foundicon_social-chat:before {
+  content: "\f018";
+}
+
+.foundicon_social-torso:before {
+  content: "\f019";
+}
+
+.foundicon_social-tumblr:before {
+  content: "\f01a";
+}
+
+.foundicon_social-video-chat:before {
+  content: "\f01b";
+}
+
+.foundicon_social-digg:before {
+  content: "\f01c";
+}
+
+.foundicon_social-wordpress:before {
+  content: "\f01d";
+}

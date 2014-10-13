@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------
+	Base Style
+----------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+margin:0;
+padding:0;
+border:0;
+font:inherit;
+font-size: 13px;
+color: #3e3e3e;
+vertical-align:baseline;
+}
+
+body{
+border-top:5px solid #172e47;
+line-height:1.5;
+color:#333;
+word-break:break-all; 
+font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", sans-serif;
+font-size:75%; /* 12px */
+}
+/* font-size
+10px :  84%
+11px :  92%
+12px :  100%
+13px :  109%
+14px :  117%
+15px :  125%
+16px :  134%
+17px :  142%
+18px :  150%
+19px :  159%
+20px :  167%
+21px :  175%
+22px :  184%
+23px :  192%
+24px :  200%
+25px :  209%
+26px :  217%
+*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+display:block;
+}
+
+:focus{
+outline:0;
+}
+
+ol, ul{
+list-style:none;
+}
+
+blockquote, q{
+quotes:none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+content:'';
+content:none;
+}
+
+table{
+border-collapse:collapse;
+border-spacing:0;
+font-size:inherit;
+font:100%;
+}
+
+textarea{
+resize:none;
+}
+
+select, input, textarea, button{
+font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", sans-serif;
+_font-family:'ＭＳ Ｐゴシック', sans-serif;
+}
+
+hr{
+display:none;
+}
+
+a,a:link,a:visited{
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}

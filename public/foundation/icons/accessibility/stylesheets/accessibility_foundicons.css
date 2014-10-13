@@ -1,0 +1,132 @@
+/* font-face */
+@font-face {
+  font-family: "AccessibilityFoundicons";
+  src: url("../fonts/accessibility_foundicons.eot");
+  src: url("../fonts/accessibility_foundicons.eot?#iefix") format("embedded-opentype"), url("../fonts/accessibility_foundicons.woff") format("woff"), url("../fonts/accessibility_foundicons.ttf") format("truetype"), url("../fonts/accessibility_foundicons.svg#AccessibilityFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon_accessibility-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon_accessibility-"]:before {
+  font-family: "AccessibilityFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+.foundicon_accessibility-wheelchair:before {
+  content: "\f000";
+}
+
+.foundicon_accessibility-speaker:before {
+  content: "\f001";
+}
+
+.foundicon_accessibility-fontsize:before {
+  content: "\f002";
+}
+
+.foundicon_accessibility-eject:before {
+  content: "\f003";
+}
+
+.foundicon_accessibility-view-mode:before {
+  content: "\f004";
+}
+
+.foundicon_accessibility-eyeball:before {
+  content: "\f005";
+}
+
+.foundicon_accessibility-asl:before {
+  content: "\f006";
+}
+
+.foundicon_accessibility-person:before {
+  content: "\f007";
+}
+
+.foundicon_accessibility-question:before {
+  content: "\f008";
+}
+
+.foundicon_accessibility-adult:before {
+  content: "\f009";
+}
+
+.foundicon_accessibility-child:before {
+  content: "\f00a";
+}
+
+.foundicon_accessibility-glasses:before {
+  content: "\f00b";
+}
+
+.foundicon_accessibility-cc:before {
+  content: "\f00c";
+}
+
+.foundicon_accessibility-blind:before {
+  content: "\f00d";
+}
+
+.foundicon_accessibility-braille:before {
+  content: "\f00e";
+}
+
+.foundicon_accessibility-iphone-home:before {
+  content: "\f00f";
+}
+
+.foundicon_accessibility-w3c:before {
+  content: "\f010";
+}
+
+.foundicon_accessibility-css:before {
+  content: "\f011";
+}
+
+.foundicon_accessibility-key:before {
+  content: "\f012";
+}
+
+.foundicon_accessibility-hearing-impaired:before {
+  content: "\f013";
+}
+
+.foundicon_accessibility-male:before {
+  content: "\f014";
+}
+
+.foundicon_accessibility-female:before {
+  content: "\f015";
+}
+
+.foundicon_accessibility-network:before {
+  content: "\f016";
+}
+
+.foundicon_accessibility-guidedog:before {
+  content: "\f017";
+}
+
+.foundicon_accessibility-universal-access:before {
+  content: "\f018";
+}
+
+.foundicon_accessibility-elevator:before {
+  content: "\f019";
+}
