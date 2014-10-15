@@ -21,7 +21,7 @@
 	</section>
 
     <nav>
-        <ul class="cd-primary-nav">
+        <ul class="navigation-menu">
             <li><a href="#0">About</a></li>
             <li><a href="#0">Contact us</a></li>
             <li><a href="#0">API documentation</a></li>

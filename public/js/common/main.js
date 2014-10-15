@@ -33,12 +33,12 @@ jQuery(document).ready(function($){
 		$('.header-content').toggleClass('menu-is-open');
 
 		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
-		if( $('.cd-primary-nav').hasClass('is-visible') ) {
-			$('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+		if( $('.navigation-menu').hasClass('is-visible') ) {
+			$('.navigation-menu').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
 			});
 		} else {
-			$('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+			$('.navigation-menu').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').addClass('overflow-hidden');
 			});
 		}
