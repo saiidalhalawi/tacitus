@@ -14,5 +14,8 @@
 // 画面アクション
 Route::get('/', 'TopController@index');
 
-// RESTapi
-
+// Admin
+Route::group(array('prefix' => 'admin'), function()
+{
+	Route::any('/people', 'PeopleController@index');
+});
