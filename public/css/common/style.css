@@ -119,7 +119,7 @@ i:before {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  width: 23px;
+  width: 28px;
   height: 4px;
   background-color: white;
   -webkit-transition: background-color 0.3s;
@@ -140,10 +140,10 @@ i:before {
   transition: transform .3s, top .3s, background-color 0s;
 }
 .switch-navigation .menu-marker::before {
-  top: -7px;
+  top: -8px;
 }
 .switch-navigation .menu-marker::after {
-  top: 7px;
+  top: 8px;
 }
 .switch-navigation .menu-marker.is-clicked {
   background-color: rgba(255, 255, 255, 0);
