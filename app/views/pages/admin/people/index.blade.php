@@ -5,25 +5,26 @@
 
 @section('body')
 
+    <a href="/admin/people/create" class="button right">Create</a>
 	<section class="panel">
         <ul>
             <li>
                 <a href="#">
-                    <i><span>タイトル</span></i>
+                    <i><span>Title</span></i>
                 </a>
-                <p>ノート</p>
+                <p>note here.</p>
             </li>
             <li>
                 <a href="#">
-                    <i><span>タイトル</span></i>
+                    <i><span>Title</span></i>
                 </a>
-                <p>ノート</p>
+                <p>note here.</p>
             </li>
             <li>
                 <a href="#">
-                    <i><span>タイトル</span></i>
+                    <i><span>Title</span></i>
                 </a>
-                <p>ノート</p>
+                <p>note here.</p>
             </li>
         </ul>
         <div class="pagination-centered">

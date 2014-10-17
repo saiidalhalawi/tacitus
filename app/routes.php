@@ -17,5 +17,6 @@ Route::get('/', 'TopController@index');
 // Admin
 Route::group(array('prefix' => 'admin'), function()
 {
-	Route::any('/people', 'PeopleController@index');
+	Route::get('/people', 'PeopleController@index');
+    Route::any('/people/create', 'PeopleController@create');
 });

@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/foundation/icons/general_enclosed/stylesheets/general_enclosed_foundicons.css">
 		<link rel="stylesheet" href="/foundation/icons/social/stylesheets/social_foundicons.css">
 
-		@include('includes.header_meta_common')
+		@include('includes.bo_header_meta_common')
 
 	    @yield('meta')
 	    @yield('script')
@@ -20,13 +20,23 @@
 			$(function() {
 			   $(document).foundation();
 			   $.getScript("/foundation/js/foundation/foundation.reveal.js");
+			   $.getScript("/foundation/js/foundation/foundation.topbar.js");
 			});
 		</script>
-		
-		@yield('header')
 
+		<nav class="top-bar" data-topbar role="navigation">
+			<section class="top-bar-section">
+				<ul>
+					<li class="active"><a href="/people">People</a></li>
+					<li><a href="#">States</a></li>
+					<li><a href="#">Technologies</a></li>
+				</ul>
+			</section>
+		</nav>
 		<article id="adminMainContainer">
-			@yield('body')
+			<section class="inner-box">
+				@yield('body')
+			</section>
 		</article>
 
 		@yield("footer")
