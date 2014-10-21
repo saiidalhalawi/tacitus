@@ -13,6 +13,9 @@
 
 // 画面アクション
 Route::get('/', 'TopController@index');
+Route::get('/timeline', 'TimelineController@index');
+
+// REST
 
 // Admin
 Route::group(array('prefix' => 'admin'), function()

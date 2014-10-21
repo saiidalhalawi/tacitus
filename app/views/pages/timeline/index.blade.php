@@ -6,19 +6,18 @@
 @section('body')
 
     <header class="header-content">
+        <div class="search-on-top">
+            <input type="text" class="searchBox thin fl" placeholder="Find Stuff">
+            <a href="#" class="btn thin fl mlrem">Search</a>
+        </div>
         <a class="switch-navigation" href="#">
             <span class="menu-marker"></span>
         </a>
     </header>
 
-	<section id="pageTitle">
-		<h1>Froissart</h1>
-		<p>Find comtemporaries at the pointed era.<br>Who existed then?</p>
-		<div>
-		    <input type="text" class="searchBox fl" placeholder="Find Stuff">
-		    <a href="#" class="btn fl mlrem">Search</a>
-		</div>
-	</section>
+    <main id="main-content">
+    <div class="inner-arrow"></div>
+    </main>
 
     <nav>
         <ul class="navigation-menu">
