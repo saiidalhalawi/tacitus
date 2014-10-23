@@ -20,6 +20,5 @@ Route::get('/timeline', 'TimelineController@index');
 // Admin
 Route::group(array('prefix' => 'admin'), function()
 {
-	Route::get('/people', 'PeopleController@index');
-    Route::any('/people/create', 'PeopleController@create');
+	Route::resource('people', 'PeopleController');
 });
