@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
 body {
   font-size: 100%;
   font-family: "Source Sans Pro", sans-serif;
@@ -37,6 +40,18 @@ i:before {
 }
 .mlrem {
 	margin-left: 1rem;
+}
+
+.hiddem {
+  display: none;
+}
+
+/* -----------------------------------------------------
+  hack foundation style
+----------------------------------------------------- */
+ul.navigation-menu {
+  margin: 0 !important;
+  overflow: hidden;
 }
 
 /* -----------------------------------------------------
@@ -293,7 +308,7 @@ i:before {
   }
 }
 
-.search-on-top {
+.search-area.on-top {
   width: 100%;
   height: 65%;
   margin: 1rem;
@@ -330,7 +345,7 @@ input.searchBox {
 	height: 55px;
 	width: 70%;
 	border-radius: 10px;
-	    -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px;
 		-moz-border-radius: 10px;
 }
 input.searchBox.thin {
@@ -372,11 +387,47 @@ input.searchBox.thin {
 }
 
 #main-content {
-  position: absolute;
+  position: relative;
   background-repeat: no-repeat center;
   min-height: 100%;
+  width: 100%;
   background-size: cover;
 }
-.inner-arrow {
 
+#timebox {
+  position: fixed;
+  bottom: 5;
+  overflow: hidden;
+  mergin: auto;
+  width: 100%;
+  height: 80%;
+}
+#timebox div {
+  width: 15%;
+  height: 10%;
+  float: left;
+}
+.inner-arrow {
+  position: fixed;
+  bottom: 50%;
+  border-top-style: dashed;
+  border-top-width: 2px;
+  border-top-color: #ddd;
+  width: 100%;
+  padding: 0 95%;
+}
+
+.person {
+  height: 2.5rem;
+  width: 20%;
+  margin: 0.2rem;
+  border-radius: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+.person.sample {
+  background-color: #1ee;
+  box-shadow: inset 0px -3px 20px 1px rgba(33,69,59,1);
+    -webkit-box-shadow: inset 0px -3px 20px 1px rgba(33,69,59,1);
+    -moz-box-shadow: inset 0px -3px 20px 1px rgba(33,69,59,1);
 }

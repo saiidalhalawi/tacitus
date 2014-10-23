@@ -14,17 +14,9 @@
 	<section id="pageTitle">
 		<h1>Froissart</h1>
 		<p>Find comtemporaries at the pointed era.<br>Who existed then?</p>
-		<div>
+		<div class="search-area">
 		    <input type="text" class="searchBox fl" placeholder="Find Stuff">
 		    <a href="#" class="btn fl mlrem">Search</a>
 		</div>
 	</section>
-
-    <nav>
-        <ul class="navigation-menu">
-            <li><a href="#0">About</a></li>
-            <li><a href="#0">Contact us</a></li>
-            <li><a href="#0">API documentation</a></li>
-        </ul>
-    </nav>
 @stop

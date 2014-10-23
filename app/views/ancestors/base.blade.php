@@ -22,11 +22,19 @@
 			   $.getScript("/foundation/js/foundation/foundation.reveal.js");
 			});
 		</script>
-		
+
 		@yield('header')
 
 		<article id="mainContainer">
 			@yield('body')
+
+			<nav>
+		        <ul class="navigation-menu">
+		            <li><a href="#0">About</a></li>
+		            <li><a href="#0">Contact us</a></li>
+		            <li><a href="#0">API documentation</a></li>
+		        </ul>
+		    </nav>
 		</article>
 
 		@yield("footer")
