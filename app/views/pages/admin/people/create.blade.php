@@ -6,7 +6,7 @@
 @section('body')
 
 	<section class="panel">
-        {{ Form::open(array('url' => '/admin/people/create')) }}
+        {{ Form::open(array('url' => '/admin/people')) }}
             <div class="row">
                 <div class="large-8 columns">
                     <label>type :

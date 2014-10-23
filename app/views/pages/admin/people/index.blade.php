@@ -6,27 +6,19 @@
 @section('body')
 
     <a href="/admin/people/create" class="button right">Create</a>
-	<section class="panel">
-        <ul>
+    <section class="panel">
+    @if (Session::has('message'))
+        <div class="alert alert-info">{{ Session::get('message') }}</div>
+    @endif
+         <ul>
+            @foreach($people as $key => $person)
             <li>
-                <a href="#">
-                    <i><span>Title</span></i>
+                <a href="{{ URL::to('admin/people/' .$person->id .'/edit' )}}">
+                    <i><span>{{ $person->name_en }}</span></i>
                 </a>
-                <p>note here.</p>
+                <p>{{ $person->title_jp }}</p>
             </li>
-            <li>
-                <a href="#">
-                    <i><span>Title</span></i>
-                </a>
-                <p>note here.</p>
-            </li>
-            <li>
-                <a href="#">
-                    <i><span>Title</span></i>
-                </a>
-                <p>note here.</p>
-            </li>
-        </ul>
+            @endforeach
         <div class="pagination-centered">
             <ul class="pagination">
                 <li class="arrow unavailable"><a href="">&laquo;</a></li>
