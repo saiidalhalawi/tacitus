@@ -21,8 +21,6 @@ TimelineScale.prototype.init = function(){
 	var index = $('.y-index');
 	$(index[0]).html(this.startYear);
 	$('.inner-arrow').append($('<span>').addClass('y-index mid').html(this.midPoint));
-console.log($('.inner-arrow').height());
-console.log($('.inner-arrow').offset());
 	$(index[1]).html(this.endYear);
 }
 
