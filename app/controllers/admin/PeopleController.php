@@ -14,7 +14,7 @@ class PeopleController extends \AdminBaseController {
 	 */
 	public function index()
 	{	// get ll
-		$people = Person::all();
+		$people = Person::paginate(15);
 		return View::make('pages.admin.people.index') -> with('people',$people);
 	}
 
