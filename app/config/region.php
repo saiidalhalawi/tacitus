@@ -10,5 +10,7 @@ return array(
 		'PORTGUL' => 5, 
 		'NETHERLAND' => 6, 
 		'OTTOMAN_EMPIRE' => 7, 
+		'ITALY' => 8, 
+		'SWEDEN' => 9, 
 	)
 );
