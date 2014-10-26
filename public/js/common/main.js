@@ -36,13 +36,14 @@ jQuery(document).ready(function($){
 		if( $('.navigation-menu').hasClass('is-visible') ) {
 			$('.navigation-menu').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
+				/*$('.search-area').find("input[type='text']").toggle();*/
 			});
-			$('.search-area').find("input[type='text']").toggle(1000);
+			
 		} else {
 			$('.navigation-menu').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').addClass('overflow-hidden');
 			});
-			$('.search-area').find("input[type='text']").toggle();
+			/*$('.search-area').find("input[type='text']").toggle();*/
 		}
 		$('.search-area').toggleClass('hidden');
 

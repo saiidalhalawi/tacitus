@@ -14,15 +14,7 @@
 	</head>
 
 	<body>
-		<script src="/foundation/js/vendor/jquery.js"></script>
-		<script src="/foundation/js/foundation.min.js"></script>
-		<script>
-			$(function() {
-			   $(document).foundation();
-			   $.getScript("/foundation/js/foundation/foundation.reveal.js");
-			});
-		</script>
-
+		
 		@yield('header')
 
 		<article id="mainContainer">
@@ -39,7 +31,7 @@
 
 		@yield("footer")
 
-		<div class="loading hide"><img src="/images/common/ui/loading.gif"></div>
+		<div class="loading hidden"><img src="/images/common/ui/loading.gif"></div>
 	</body>
 </html>
 

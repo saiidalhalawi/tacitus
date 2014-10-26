@@ -1,7 +1,7 @@
 @extends('ancestors.base')
 
 
-<title>@section('title')Froissart</title>
+<title>@section('title')Chronicler</title>
 
 @section('body')
 
@@ -12,7 +12,7 @@
     </header>
 
 	<section id="pageTitle">
-		<h1>Froissart</h1>
+		<h1>Chronicler</h1>
 		<p>Find comtemporaries at the pointed era.<br>Who existed then?</p>
 		<div class="search-area">
 		    <input type="text" class="searchBox fl" placeholder="Find Stuff">
