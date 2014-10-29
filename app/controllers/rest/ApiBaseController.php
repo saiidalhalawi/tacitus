@@ -15,13 +15,8 @@ class ApiBaseController extends BaseController
      *
      * @return Response
      */
-    public function renderResponse(){
-    	$from = Input::get('from');
-    	$to = Input::get('to');
-    	// From　Toのどちらかが始端終端に該当すれば返す.
-    	$people = Person::leftJoin('person_types','people.id','=','person_types.perspon_id')
-    		->whereRaw('('.$from.' between birth_year and death_year or '
-    			. $to.' between birth_year and death_year )')->get();
-    	return Response::json($people);
+    protected function renderResponse($result, $code = null){
+
+        return Response::json(array('code' => $code, 'result' => $result));
     }
 }
