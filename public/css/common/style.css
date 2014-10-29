@@ -400,6 +400,7 @@ input.searchBox.thin {
   height: 100%;
   background-color: #3a3a3a;
   opacity: 0.75;
+  cursor: url('/images/common/ui/grab.cur'), none;
 }
 
 .vector {
@@ -431,8 +432,8 @@ input.searchBox.thin {
   border-top-style: dashed;
   border-top-width: 2px;
   border-top-color: #ddd;
-  width: 100%;
-  padding: 0 95%;
+  width: 150%;
+  /*padding: 0 95%;*/
 }
 .y-index {
   color: #ddd;
@@ -536,12 +537,13 @@ input.searchBox.thin {
 .name-on-bar {    
   position: relative;
   display: inline-block;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .name-on-bar > span {
   text-align: center;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   background: #fff;
   background-clip: padding-box;
@@ -549,7 +551,7 @@ input.searchBox.thin {
   border: 1px solid #222;
   border-radius: 5px;
   position: absolute;
-  width: 12rem;
+  width: 14rem;
   left: 50%;
   padding: 10px 1.5rem;
   bottom: 100%;

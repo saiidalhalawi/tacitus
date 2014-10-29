@@ -2,7 +2,9 @@ function TimelineScale(start, end){
 	this.startYear = start;
 	this.endYear = end;
 
-	this.midPoint = 0;
+	this.midPoint1 = 0;
+	this.midPoint2 = 0;
+	this.midPoint3 = 0;
 	this.range = 0;
 	this.pxPerYear = 0;
 
@@ -13,7 +15,7 @@ TimelineScale.prototype.init = function(){
 
 	this.range = this.endYear - this.startYear;
 	var dividePoint = this.range / 4, 
-		timelineLength = $('#timebox').width();
+		timelineLength = $('#timebox').width()*0.90;
 	this.midPoint1 = this.startYear + dividePoint;
 	this.midPoint2 = this.startYear + (dividePoint*2);
 	this.midPoint3 = this.startYear + (dividePoint*3);
@@ -36,7 +38,7 @@ TimelineScale.prototype.init = function(){
 						midYearPoint.clone()
 								.css('left', (dividePoint*3)*this.pxPerYear)
 								.html(this.midPoint3));
-	$(index[1]).html(this.endYear);
+	$(index[1]).html(this.endYear).css('left', this.range*this.pxPerYear);
 	$('#timebox').width(this.range*this.pxPerYear);
 }
 

@@ -1,7 +1,8 @@
 $(function() {
 
 	$('#timebox').dragScroll({});
-	var clicked = false, base = count = 0;
+
+	/*
 	$('.vector.prev').on('mouseover', function(){
 		var div = $('#timebox'), 
 			pos = div.scrollLeft();
@@ -12,6 +13,7 @@ $(function() {
 			pos = div.scrollLeft();
         div.animate({ scrollLeft: div.position().left+100 }, 500);
     });
+	*/
 	
 	var timelineScale = new TimelineScale(1450, 1750), 
 		barController = new BarController(timelineScale);
