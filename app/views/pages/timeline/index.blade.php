@@ -6,7 +6,7 @@
 <script src="/js/timeline/manipulator.js"></script>
 @stop
 
-<title>@section('title')Froissart</title>
+<title>@section('title')Chronicler</title>
 
 @section('body')
 
@@ -21,11 +21,15 @@
     </header>
 
     <main id="main-content">
-        <section id="timebox">
-            <div class="inner-arrow">&nbsp;
-                  <span class="y-index start"></span>
-                  <span class="y-index end"></span>
-            </div>
+    	<section>
+	        <section id="timebox">
+	        	<span class="vector prev">&lt;</span>
+	            <div class="inner-arrow">&nbsp;
+	                  <span class="y-index start"></span>
+	                  <span class="y-index end"></span>
+	            </div>
+	            <span class="vector next">&gt;</span>
+	        </section>
         </section>
     </main>
 @stop

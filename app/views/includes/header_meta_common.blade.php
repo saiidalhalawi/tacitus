@@ -5,6 +5,7 @@
 <script src="/foundation/js/vendor/modernizr.js"></script>
 
 <script src="/js/common/jquery-2.1.1.min.js"></script>
+<script src="/js/common/jquery.dragscroll.js"></script>
 <script src="/js/common/main.js"></script>
 
 <link rel="stylesheet" href="/css/common/style.css">
