@@ -1,5 +1,21 @@
 $(function() {
-	var timelineScale = new TimelineScale(1500, 1700), 
+
+	$('#timebox').dragScroll({});
+
+	/*
+	$('.vector.prev').on('mouseover', function(){
+		var div = $('#timebox'), 
+			pos = div.scrollLeft();
+        div.animate({ scrollLeft: div.position().left-100 }, 500);
+    });
+    $('.vector.next').on('mouseover', function(){
+		var div = $('#timebox'), 
+			pos = div.scrollLeft();
+        div.animate({ scrollLeft: div.position().left+100 }, 500);
+    });
+	*/
+	
+	var timelineScale = new TimelineScale(1450, 1750), 
 		barController = new BarController(timelineScale);
 	
 	var peopleResourse = {
@@ -51,6 +67,23 @@ $(function() {
 			birth_year: 15941209, 
 			death_year: 16321106, 
 		}, 
+		6: {
+			id: 7, 
+			region_id: 10, 
+			name_en: 'Peter the Great', 
+			title_en: 'Tsar',  
+			birth_year: 16720530, 
+			death_year: 17250128, 
+		}, 
+		7: {
+			id: 8, 
+			region_id: 11, 
+			name_en: 'Leo X', 
+			title_en: 'Pope of the Catholic Church',  
+			birth_year: 14751211, 
+			death_year: 15211201, 
+		}, 
+
 	}
 	barController.setBars(peopleResourse);
 });

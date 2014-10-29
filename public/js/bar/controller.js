@@ -33,7 +33,6 @@ BarController.prototype.setBars = function(people){
 							'top' : idx * controller.verticalMargin
 						})
 					.attr('person_id', currPerson.id)
-					//.html(currPerson.name_en);
 					.html($(tooltip));
 		$('#timebox').append(tmpBar);
 	});

@@ -17,6 +17,6 @@ class ApiBaseController extends BaseController
      */
     protected function renderResponse($result, $code = null){
 
-    	return Response::json(array('code' => $code, 'result' => $result));
+        return Response::json(array('code' => $code, 'result' => $result));
     }
 }

@@ -49,6 +49,10 @@ i:before {
   display: none;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 /* -----------------------------------------------------
   hack foundation style
 ----------------------------------------------------- */
@@ -382,27 +386,54 @@ input.searchBox.thin {
   width: 100%;
   background-size: cover;
 }
-
+#main-content>section {
+  position: absolute;
+  bottom: 0;
+  height: 85%;
+  width: 100%;
+}
 #timebox {
   position: fixed;
-  bottom: 5;
-  overflow: visible;
-  mergin: auto;
-  width: 100%;
-  height: 85%;
-  /*
-  background-color: #333;
-  opacity: 0.45;
-  */
+  overflow: scroll !important;
+  margin: 0 auto;
+  width: 200%;
+  height: 100%;
+  background-color: #3a3a3a;
+  opacity: 0.75;
+  cursor: url('/images/common/ui/grab.cur'), none;
 }
-.inner-arrow {
+
+.vector {
   position: fixed;
-  bottom: 40%;
+  color: #fff;
+  font-size: 6rem;
+  font-weight: bold;
+  opacity: 0.35;
+  font-family: sans-serif;
+  top: 300;
+  display: block;
+  padding: 1rem 0;
+  cursor: pointer;
+  z-index: 15;
+}
+.vector.prev {
+  left: 10;
+}
+.vector.next {
+  right: 10;
+}
+.vector:hover {
+  color: #206bcf;
+}
+
+.inner-arrow {
+  position: absolute;
+  bottom: 25%;
   border-top-style: dashed;
   border-top-width: 2px;
   border-top-color: #ddd;
-  width: 100%;
-  padding: 0 95%;
+  width: 150%;
+  /*padding: 0 95%;*/
 }
 .y-index {
   color: #ddd;
@@ -483,7 +514,21 @@ input.searchBox.thin {
     -webkit-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
     -moz-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
 }
-
+/** Russia */
+.person.state-10 {
+  color: #fff !important;
+  background-color: #2d0ce8;
+  box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
+    -webkit-box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
+    -moz-box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
+}
+/** Roman Curia */
+.person.state-11 {
+  background-color: #fff;
+  box-shadow: inset 0px -3px 20px 1px rgba(245,245,63,1);
+    -webkit-box-shadow: inset 0px -3px 20px 1px rgba(245,245,63,1);
+    -moz-box-shadow: inset 0px -3px 20px 1px rgba(245,245,63,1);
+}
 /** -------------------- */
 /** style for each State */
 /** -------------------- */
@@ -492,12 +537,13 @@ input.searchBox.thin {
 .name-on-bar {    
   position: relative;
   display: inline-block;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .name-on-bar > span {
   text-align: center;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   background: #fff;
   background-clip: padding-box;
@@ -505,7 +551,7 @@ input.searchBox.thin {
   border: 1px solid #222;
   border-radius: 5px;
   position: absolute;
-  width: 12rem;
+  width: 14rem;
   left: 50%;
   padding: 10px 1.5rem;
   bottom: 100%;

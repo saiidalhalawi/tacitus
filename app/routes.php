@@ -16,6 +16,8 @@ Route::get('/', 'TopController@index');
 Route::get('/timeline', 'TimelineController@index');
 
 // REST
+Route::any('/rest/{lang}/search/people', 'SearchPeopleController@searchPeople');
+
 
 // Admin
 Route::group(array('prefix' => 'admin'), function()
