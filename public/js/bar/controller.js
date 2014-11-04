@@ -22,8 +22,8 @@ BarController.prototype.setBars = function(people){
 
 		tooltip = '<i class="name-on-bar">'+currPerson.name_en
 					+'<span>'+currPerson.name_en+'<br>'+currPerson.title_en
-					+'<br>'+currPerson.birth_year.toString().substring(0, 4)+'-'
-					+currPerson.death_year.toString().substring(0, 4)+'</span>'
+					+'<br>'+String(currPerson.birth_year).substring(0, 4)+'-'
+					+String(currPerson.death_year).substring(0, 4)+'</span>'
 					+'</i>';
 		tmpBar = $('<div class="bar person state-'+currPerson.region_id+'">&nbsp;</div>')
 					.css({

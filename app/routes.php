@@ -23,4 +23,5 @@ Route::any('/rest/{lang}/search/people', 'SearchController@people');
 Route::group(array('prefix' => 'admin'), function()
 {
 	Route::resource('people', 'PeopleController');
+	Route::resource('event', 'EventController');
 });
