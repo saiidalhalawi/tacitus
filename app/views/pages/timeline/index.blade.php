@@ -1,6 +1,7 @@
 @extends('ancestors.base')
 
 @section('meta')
+<script src="/js/common/ajaxHandler.js"></script>
 <script src="/js/timeline/scale.js"></script>
 <script src="/js/bar/controller.js"></script>
 <script src="/js/timeline/manipulator.js"></script>

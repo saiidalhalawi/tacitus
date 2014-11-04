@@ -2,13 +2,16 @@
 
 /**
  * 
- * 人物検索
+ * 検索API
  *
  * @author m.tadanawa
  *
  */
 class SearchController extends \ApiBaseController
 {
+
+    private static $DEFAULT_ITEM_COUNT = 100;
+
     /**
      * Search people.
      *
@@ -28,8 +31,14 @@ class SearchController extends \ApiBaseController
             $people = $people->where('region_id','=',Input::get('region_id'));
         }
         
-		$people = $people->orderBy('people.id')->get();
+		$people = $people->orderBy('people.id');
 
-        return $this->renderResponse($people);
+        $limit = Input::get('limit', self::$DEFAULT_ITEM_COUNT);
+        if(is_numeric($limit)){
+            $people = $people->take($limit);
+        }
+        $ret = $people->get();
+
+        return $this->renderResponse($ret);
 	}
 }
