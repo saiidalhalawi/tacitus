@@ -12,7 +12,7 @@
                     <label>type :
                         <select>
                             @foreach($PERSON_TYPES as $ID => $PERSON_TYPE)
-                                <option value="$ID">{{{ strtolower($PERSON_TYPE['en']) }}}</option>
+                                <option value="{{{$ID}}}">{{{ strtolower($PERSON_TYPE['en']) }}}</option>
                             @endforeach
                         </select>
                     </label>
@@ -28,9 +28,16 @@
                     </label>
                     <label>birth_year :
                         <input name="birth_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
+                        <span>is fixed?</span>&nbsp;<input name="birth_year_fixed" type="checkbox" checked required>
                     </label>
                     <label>death_year :
                         <input name="death_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
+                        <span>is fixed?</span>&nbsp;<input name="death_year_fixed" type="checkbox" checked required>
+                    </label>
+                    <label>region :
+                        <select>
+                            <option value="-">-</option>
+                        </select>
                     </label>
                     <label>title_en :
                         <input name="title_en" type="text" value="" placeholder="Please enter a title here">

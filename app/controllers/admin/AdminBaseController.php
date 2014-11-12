@@ -12,5 +12,9 @@ class AdminBaseController extends BaseController
 {
 
     public $layout = 'ancestors.admin.base';
-
+/*
+    public function __construct(){
+        View::share('hoge', null);
+    }
+*/
 }

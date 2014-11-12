@@ -21,10 +21,10 @@
                 </li>
                 @endforeach
             @else
-                <li>No item founded.</li>
+                <li>No item found.</li>
             @endif
         <div class="pagination-centered">
-            {{ $events->links() }} 
+            {{ $events->links() }}
         </div>
     </section>
 @stop
