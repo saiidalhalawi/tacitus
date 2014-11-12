@@ -10,9 +10,11 @@
             <div class="row">
                 <div class="large-8 columns">
                     <label>type :
-                        <input type="radio" name="person_type_id" value="1" id="politician" ><label for="politician">Politician</label>
-                        <input type="radio" name="person_type_id" value="2" id="musician" ><label for="musician">musician</label>
-                        <input type="radio" name="person_type_id" value="3" id="writer" ><label for="writer">writer</label>
+                        <select>
+                            @foreach($PERSON_TYPES as $ID => $PERSON_TYPE)
+                                <option value="$ID">{{{ strtolower($PERSON_TYPE['en']) }}}</option>
+                            @endforeach
+                        </select>
                     </label>
                 </div>
             </div>
@@ -31,10 +33,10 @@
                         <input name="death_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
                     </label>
                     <label>title_en :
-                        <input name="title_en" type="text" value="" placeholder="Please enter a title here" required>
+                        <input name="title_en" type="text" value="" placeholder="Please enter a title here">
                     </label>
                     <label>title_jp :
-                        <input name="title_jp" type="text" value="" placeholder="タイトルを入力してください" required>
+                        <input name="title_jp" type="text" value="" placeholder="タイトルを入力してください">
                     </label>
                     <label>explanation_en :</label>
                         <textarea name="explanation_en" value="" placeholder="Please enter a explanation here" required ></textarea>
