@@ -22,7 +22,8 @@ $(function() {
 	ajaxObj.url = '/rest/en/search/people';
 	ajaxObj.data = {
 					from: 15000000, 
-					to: 17000000
+					to: 17000000, 
+					limit: 8
 				}
 	
 	ajaxObj.callbackSuccess = function(data){
