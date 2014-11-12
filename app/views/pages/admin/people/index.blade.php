@@ -11,16 +11,20 @@
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
          <ul>
-            @foreach($people as $key => $person)
-            <li>
-                <a href="{{ URL::to('admin/people/' .$person->id .'/edit' )}}">
-                    <i><span>{{ $person->name_en }}</span></i>
-                </a>
-                <p>{{ $person->title_jp }}</p>
-            </li>
-            @endforeach
+            @if(!$people->isEmpty())
+                @foreach($people as $key => $person)
+                <li>
+                    <a href="{{ URL::to('admin/people/' .$person->id .'/edit' )}}">
+                        <i><span>{{ $person->name_en }}</span></i>
+                    </a>
+                    <p>{{ $person->title_en }}</p>
+                </li>
+                @endforeach
+            @else
+                <li>No item found.</li>
+            @endif
         <div class="pagination-centered">
-            {{ $people->links() }} 
+            {{ $people->links() }}
         </div>
     </section>
 @stop

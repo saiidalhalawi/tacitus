@@ -13,7 +13,7 @@ class EventController extends \AdminBaseController {
 	 * @return Response
 	 */
 	public function index()
-	{	
+	{
 		$events = HistoricalEvent::paginate(15);
 		return View::make('pages.admin.event.index') -> with('events',$events);
 	}
@@ -36,17 +36,15 @@ class EventController extends \AdminBaseController {
      * @return Response
      */
 	public function store(){
-           // people
-            $event = new HistoricalEvent;
-            $event->name_en = Input::get('name_en');
-            $event->name_jp = Input::get('name_jp');
-            $event->birth_year = Input::get('birth_year');
-            $event->death_year = Input::get('death_year');
-            $event->title_en = Input::get('title_en');
-            $event->title_jp = Input::get('title_jp');
-            $event->explanation_en = Input::get('explanation_en');
-            $event->explanation_jp = Input::get('explanation_jp');
-            $event->save();
+        // people
+        $event = new HistoricalEvent;
+        $event->name_en = Input::get('name_en');
+        $event->name_jp = Input::get('name_jp');
+        $event->birth_year = Input::get('birth_year');
+        $event->death_year = Input::get('death_year');
+        $event->explanation_en = Input::get('explanation_en');
+        $event->explanation_jp = Input::get('explanation_jp');
+        $event->save();
 
          //redirect
          Session::flash('message','Success create.');
@@ -83,7 +81,7 @@ class EventController extends \AdminBaseController {
         $event->title_jp = Input::get('title_jp');
         $event->explanation_en = Input::get('explanation_en');
         $event->explanation_jp = Input::get('explanation_jp');
-        $event->save();	
+        $event->save();
 
         //redirect
         Session::flash('message','Success Update.');
