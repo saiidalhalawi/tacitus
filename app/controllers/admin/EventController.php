@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 管理機能 事件コントローラ
+ * 管理機能 出来事コントローラ
  *
  */
 class EventController extends \AdminBaseController {
