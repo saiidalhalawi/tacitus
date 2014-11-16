@@ -16,7 +16,7 @@ class InventionController extends \AdminBaseController {
 	{
 		$inventions = Invention::paginate(15);
 		return View::make('pages.admin.invention.index')
-                    ->with('invention', $invention);
+                    ->with('inventions', $inventions);
 	}
 
 	/**
