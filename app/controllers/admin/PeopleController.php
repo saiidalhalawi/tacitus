@@ -6,6 +6,10 @@
  */
 class PeopleController extends \AdminBaseController {
 
+    public function __construct(){
+        View::share('PERSON_TYPES', Config::get('person_type.types'));
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /admin/people
@@ -90,7 +94,7 @@ class PeopleController extends \AdminBaseController {
         $person->title_jp = Input::get('title_jp');
         $person->explanation_en = Input::get('explanation_en');
         $person->explanation_jp = Input::get('explanation_jp');
-        $person->save();	
+        $person->save();
 
         //redirect
         Session::flash('message','Success Update.');

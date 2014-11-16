@@ -12,5 +12,4 @@ class AdminBaseController extends BaseController
 {
 
     public $layout = 'ancestors.admin.base';
-
 }

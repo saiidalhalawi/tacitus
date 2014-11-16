@@ -5,26 +5,26 @@
 
 @section('body')
 
-    <a href="/admin/people/create" class="button right">Create</a>
+    <a href="/admin/state/create" class="button right">Create</a>
     <section class="panel">
     @if (Session::has('message'))
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
          <ul>
-            @if(!$people->isEmpty())
-                @foreach($people as $key => $person)
+            @if(!$states->isEmpty())
+                @foreach($states as $key => $state)
                 <li>
-                    <a href="{{ URL::to('admin/people/' .$person->id .'/edit' )}}">
-                        <i><span>{{ $person->name_en }}</span></i>
+                    <a href="{{ URL::to('admin/state/' . $state->id .'/edit' )}}">
+                        <i><span>{{ $state->name_en }}</span></i>
                     </a>
-                    <p>{{ $person->title_en }}</p>
+                    <p>{{ $state->title_jp }}</p>
                 </li>
                 @endforeach
             @else
                 <li>No item found.</li>
             @endif
         <div class="pagination-centered">
-            {{ $people->links() }}
+            {{ $states->links() }}
         </div>
     </section>
 @stop

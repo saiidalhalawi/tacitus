@@ -15,7 +15,7 @@ AjaxHandler.prototype.call = function(){
 	$.ajax({
 		type: this.type,
 		url: this.url, 
-		data: $.extend({_token: token}, this.data), 
+		data: this.data, 
 		dataType: this.dataType, 
 		success: this.callbackSuccess, 
 		error: this.callbackError

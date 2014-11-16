@@ -24,15 +24,7 @@
 			});
 		</script>
 
-		<nav class="top-bar" data-topbar role="navigation">
-			<section class="top-bar-section">
-				<ul>
-					<li class="active"><a href="/people">People</a></li>
-					<li><a href="#">States</a></li>
-					<li><a href="#">Technologies</a></li>
-				</ul>
-			</section>
-		</nav>
+		@include('includes.bo_header_nav')
 		<article id="adminMainContainer">
 			<section class="inner-box">
 				@yield('body')

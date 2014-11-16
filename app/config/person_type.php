@@ -1,0 +1,41 @@
+<?php
+
+return array(
+
+	'types' => array(
+		1 => array('en' => 'POLITICIAN', 'ja' => '-'),
+		2 => array('en' => 'SOVEREIGN', 'ja' => '-'),
+		3 => array('en' => 'STATESMAN', 'ja' => '-'),
+		4 => array('en' => 'PHILOSOPHER', 'ja' => '-'),
+		5 => array('en' => 'CHURCHMAN', 'ja' => '-'),
+		6 => array('en' => 'CHRONICLER', 'ja' => '-'),
+		7 => array('en' => 'WRITER', 'ja' => '-'),
+		8 => array('en' => 'MONK', 'ja' => '-'),
+		9 => array('en' => 'MILITARY', 'ja' => '-'),
+		10 => array('en' => 'GENERAL', 'ja' => '-'),
+		11 => array('en' => 'REVOLUTIONARY', 'ja' => '-'),
+		12 => array('en' => 'MUSICIAN', 'ja' => '-'),
+		13 => array('en' => 'COMPOSER', 'ja' => '-'),
+		14 => array('en' => 'THEOLOGIAN', 'ja' => '-'),
+		15 => array('en' => 'PROPHET', 'ja' => '-'),
+		16 => array('en' => 'MERCHANT', 'ja' => '-'),
+		17 => array('en' => 'CALIPH', 'ja' => '-'),
+		18 => array('en' => 'AMIR', 'ja' => '-'),
+		19 => array('en' => 'SULTAN', 'ja' => '-'),
+		20 => array('en' => 'KADII', 'ja' => '-'),
+		21 => array('en' => 'EMPEROR', 'ja' => '-'),
+		22 => array('en' => 'EMPRESS', 'ja' => '-'),
+		23 => array('en' => 'NOBLE', 'ja' => '-'),
+		24 => array('en' => 'POPE', 'ja' => '-'),
+		25 => array('en' => 'ARCHBISHOP', 'ja' => '-'),
+		26 => array('en' => 'DRAMATIST', 'ja' => '-'),
+		27 => array('en' => 'KING', 'ja' => '-'),
+		28 => array('en' => 'QUEEN', 'ja' => '-'),
+		29 => array('en' => 'ANARCHIST', 'ja' => '-'),
+		30 => array('en' => 'SOCILIST', 'ja' => '-'),
+		31 => array('en' => 'JURIST', 'ja' => '-'),
+		32 => array('en' => 'HISTORIAN', 'ja' => '-'),
+		33 => array('en' => 'PAINTER', 'ja' => '-'),
+		34 => array('en' => 'BUILDER', 'ja' => '-'),
+	)
+);
