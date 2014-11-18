@@ -24,11 +24,11 @@
                     </label>
                     <label>rise year :
                         <input name="rise_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
-                        <span>is fixed?</span>&nbsp;<input name="is_rise_year_fixed" type="checkbox" checked required>
+                        <span>is fixed?</span>&nbsp;<input name="is_rise_year_fixed" type="checkbox" checked>
                     </label>
                     <label>fall year :
                         <input name="fall_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
-                        <span>is fixed?</span>&nbsp;<input name="is_fall_year_fixed" type="checkbox" checked required>
+                        <span>is fixed?</span>&nbsp;<input name="is_fall_year_fixed" type="checkbox" checked>
                     </label>
                     <label>explanation_en :</label>
                         <textarea name="explanation_en" value="" placeholder="Please enter a explanation here" required ></textarea>
