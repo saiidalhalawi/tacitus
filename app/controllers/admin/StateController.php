@@ -46,9 +46,9 @@ class StateController extends \AdminBaseController {
         $state->name_jp = Input::get('name_jp');
         $state->region_id = Input::get('region_id');
         $state->rise_year = Input::get('rise_year');
-        $state->is_rise_year_fixed = Input::get('is_rise_year_fixed');
+        if(Input::has('is_rise_year_fixed')) $state->is_rise_year_fixed = Input::get('is_rise_year_fixed');
         $state->fall_year = Input::get('fall_year');
-        $state->is_fall_year_fixed = Input::get('is_fall_year_fixed');
+        if(Input::has('is_fall_year_fixed')) $state->is_fall_year_fixed = Input::get('is_fall_year_fixed');
         $state->explanation_en = Input::get('explanation_en');
         $state->explanation_jp = Input::get('explanation_jp');
         $state->capital_name_en = Input::get('capital_name_en');

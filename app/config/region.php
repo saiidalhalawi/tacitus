@@ -6,8 +6,6 @@ return array(
 		'ENGLAND' => 1, 
 		'FRANCE' => 2, 
 		'HOLY_ROMAN_EMPIRE' => 3, 
-		'SPAIN' => 4, 
-		'PORTGUL' => 5, 
 		'NETHERLAND' => 6, 
 		'OTTOMAN_EMPIRE' => 7, 
 		'ITALY' => 8, 
@@ -25,6 +23,7 @@ return array(
 		8 => array('en' => 'AUSTLARIA', 'ja' => '-'),
 		9 => array('en' => 'NORTH_AMERICA', 'ja' => '-'),
 		10 => array('en' => 'CARREBEAN', 'ja' => '-'),
-		11 => array('en' => 'SOUTH_AMERICA', 'ja' => '-')
+		11 => array('en' => 'SOUTH_AMERICA', 'ja' => '-'), 
+		12 => array('en' => 'MEDITERRANEAN ', 'ja' => '-'), 
 	)
 );
