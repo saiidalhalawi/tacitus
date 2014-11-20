@@ -26,6 +26,13 @@
                     <label>name_jp :
                         <input name="name_jp" type="text" value="" placeholder="名前を入力してください" required>
                     </label>
+                    <label>state :
+                        <select name="state_id">
+                            @foreach($states as $state)
+                                <option value="{{{$state->id}}}">{{{ $state->name_en }}}&nbsp;</option>
+                            @endforeach
+                        </select>
+                    </label>
                     <label>birth_year :
                         <input name="birth_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;<input name="birth_year_fixed" type="checkbox" checked required>

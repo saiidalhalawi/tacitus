@@ -2,16 +2,6 @@
 
 return array(
 
-	'region_code' => array(
-		'ENGLAND' => 1, 
-		'FRANCE' => 2, 
-		'HOLY_ROMAN_EMPIRE' => 3, 
-		'NETHERLAND' => 6, 
-		'OTTOMAN_EMPIRE' => 7, 
-		'ITALY' => 8, 
-		'SWEDEN' => 9, 
-	), 
-
 	'regions' => array(
 		1 => array('en' => 'EAST_ASIA', 'ja' => '-'),
 		2 => array('en' => 'SOUTH_EAST_ASIA', 'ja' => '-'),
