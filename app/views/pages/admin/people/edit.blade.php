@@ -20,17 +20,40 @@
                     <label>name_jp :
                         <input name="name_jp" type="text" value="{{ $person->name_jp }}" placeholder="名前を入力してください" required>
                     </label>
+                    <label>state :
+                        <select name="state_id">
+                            @foreach($states as $state)
+                                @if($state->id == $person->state_id)
+                                    <option value="{{{$state->id}}}" selected>{{{ $state->name_en }}}&nbsp;</option>
+                                @else
+                                    <option value="{{{$state->id}}}">{{{ $state->name_en }}}&nbsp;</option>
+                                @endif
+                            @endforeach
+                        </select>
+                    </label>
                     <label>birth_year :
                         <input name="birth_year" type="number" value="{{ $person->birth_year }}" placeholder="yyyy or yyyymmdd" required>
+                        <span>is fixed?</span>&nbsp;
+                        @if($person->is_rise_year_fixed)
+                            <input name="is_birth_year_fixed" type="checkbox" checked >
+                        @else
+                            <input name="is_birth_year_fixed" type="checkbox" >
+                        @endif
                     </label>
                     <label>death_year :
                         <input name="death_year" type="number" value="{{ $person->death_year }}" placeholder="yyyy or yyyymmdd" required>
+                        <span>is fixed?</span>&nbsp;
+                        @if($person->is_rise_year_fixed)
+                            <input name="is_death_year_fixed" type="checkbox" checked >
+                        @else
+                            <input name="is_death_year_fixed" type="checkbox" >
+                        @endif
                     </label>
                     <label>title_en :
-                        <input name="title_en" type="text" value="{{ $person->title_en }}" placeholder="Please enter a title here" required>
+                        <input name="title_en" type="text" value="{{ $person->title_en }}" placeholder="Please enter a title here" >
                     </label>
                     <label>title_jp :
-                        <input name="title_jp" type="text" value="{{ $person->title_jp }}" placeholder="タイトルを入力してください" required>
+                        <input name="title_jp" type="text" value="{{ $person->title_jp }}" placeholder="タイトルを入力してください" >
                     </label>
                     <label>explanation_en :</label>
                         <textarea name="explanation_en" placeholder="Please enter a explanation here" required > {{ $person->explanation_en }}</textarea>
