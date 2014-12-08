@@ -30,7 +30,9 @@ class PeopleController extends \AdminBaseController {
 	 */
 	public function create()
 	{
- 		return View::make('pages.admin.people.create');
+
+ 		return View::make('pages.admin.people.create')
+                    ->with('states', State::get());
 	}
 
     /**
@@ -74,7 +76,9 @@ class PeopleController extends \AdminBaseController {
      */
 	public function edit($id){
 		$person = Person::find($id);
-		return View::make('pages.admin.people.edit')->with('person',$person);
+		return View::make('pages.admin.people.edit')
+                    ->with('person',$person)
+                    ->with('states', State::get());
 	}
 
     /**
@@ -88,6 +92,9 @@ class PeopleController extends \AdminBaseController {
 		$person = Person::find($id);
         $person->name_en = Input::get('name_en');
         $person->name_jp = Input::get('name_jp');
+
+        $person->state_id = Input::get('state_id');
+
         $person->birth_year = Input::get('birth_year');
         $person->death_year = Input::get('death_year');
         $person->title_en = Input::get('title_en');

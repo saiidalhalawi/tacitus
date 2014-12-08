@@ -25,7 +25,7 @@ BarController.prototype.setBars = function(people){
 					+'<br>'+String(currPerson.birth_year).substring(0, 4)+'-'
 					+String(currPerson.death_year).substring(0, 4)+'</span>'
 					+'</i>';
-		tmpBar = $('<div class="bar person state-'+currPerson.region_id+'">&nbsp;</div>')
+		tmpBar = $('<div class="bar person state-'+currPerson.state_id+'">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 
