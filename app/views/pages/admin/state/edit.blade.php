@@ -26,18 +26,18 @@
                         <input name="rise_year" type="number" value="{{{ $state->rise_year }}}" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;
                         @if($state->is_rise_year_fixed)
-                            <input name="is_rise_year_fixed" type="checkbox" checked required>
+                            <input name="is_rise_year_fixed" type="checkbox" checked>
                         @else
-                            <input name="is_rise_year_fixed" type="checkbox" required>
+                            <input name="is_rise_year_fixed" type="checkbox">
                         @endif
                     </label>
                     <label>fall year :
                         <input name="fall_year" type="number" value="{{{ $state->fall_year }}}" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;
                         @if($state->is_fall_year_fixed)
-                            <input name="is_fall_year_fixed" type="checkbox" checked required>
+                            <input name="is_fall_year_fixed" type="checkbox" checked>
                         @else
-                            <input name="is_fall_year_fixed" type="checkbox" required>
+                            <input name="is_fall_year_fixed" type="checkbox">
                         @endif
                     </label>
                     <label>explanation_en :</label>
