@@ -9,12 +9,26 @@
 
 <title>@section('title')Chronicler</title>
 
+<script>
+    @if(!empty($keywords))
+        var keywords = '{{{ $keywords }}}', 
+            from = {{{ $from or 0}}}, 
+            to = {{{ $to or 0}}}, 
+            words = '{{{ $words or null}}}';
+    @else
+        var from = to = 0, 
+            words = '';
+    @endif
+</script>
+
 @section('body')
 
     <header class="header-content">
         <div class="search-area on-top">
-            <input type="text" class="searchBox thin fl" placeholder="Find Stuff">
-            <a href="#" class="btn thin fl mlrem">Search</a>
+            <form name="searchOnTop" action="/timeline" method="GET">
+                <input type="text" name="k" class="searchBox thin fl" value="{{{ $keywords or null}}}" placeholder="Find Stuff">
+                <a onclick="document.forms.searchOnTop.submit();" href="#" class="btn thin fl mlrem">Search</a>
+            </form>
         </div>
         <a class="switch-navigation" href="#">
             <span class="menu-marker"></span>

@@ -15,8 +15,10 @@
 		<h1>Chronicler</h1>
 		<p>Find comtemporaries at the pointed era.<br>Who existed then?</p>
 		<div class="search-area">
-		    <input type="text" class="searchBox fl" placeholder="Find Stuff">
-		    <a href="#" class="btn fl mlrem">Search</a>
+			<form name="searchOnTop" action="/timeline" method="GET">
+			    <input type="text" name="k" class="searchBox fl" placeholder="Find Stuff">
+			    <a onclick="document.forms.searchOnTop.submit();" href="#" class="btn fl mlrem">Search</a>
+		    </form>
 		</div>
 	</section>
 @stop
