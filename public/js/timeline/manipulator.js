@@ -15,14 +15,14 @@ $(function() {
     });
 	*/
 	
-	var timelineScale = new TimelineScale(1300, 1500), 
+	var timelineScale = new TimelineScale(from - 50, to - 50), 
 		barController = new BarController(timelineScale);
 	
 	var ajaxObj = new AjaxHandler();
 	ajaxObj.url = '/rest/en/search/people';
 	ajaxObj.data = {
-					from: 13500000, 
-					to: 14000000, 
+					from: from * 10000, 
+					to: to * 10000, 
 					limit: 30
 				}
 	

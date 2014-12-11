@@ -34,7 +34,7 @@
                     <label>birth_year :
                         <input name="birth_year" type="number" value="{{ $person->birth_year }}" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;
-                        @if($person->is_rise_year_fixed)
+                        @if($person->is_birth_year_fixed)
                             <input name="is_birth_year_fixed" type="checkbox" checked >
                         @else
                             <input name="is_birth_year_fixed" type="checkbox" >
@@ -43,7 +43,7 @@
                     <label>death_year :
                         <input name="death_year" type="number" value="{{ $person->death_year }}" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;
-                        @if($person->is_rise_year_fixed)
+                        @if($person->is_death_year_fixed)
                             <input name="is_death_year_fixed" type="checkbox" checked >
                         @else
                             <input name="is_death_year_fixed" type="checkbox" >

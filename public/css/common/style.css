@@ -433,7 +433,7 @@ input.searchBox.thin {
   border-top-width: 2px;
   border-top-color: #ddd;
   width: 150%;
-  /*padding: 0 95%;*/
+  z-index: 55;
 }
 .y-index {
   color: #ddd;
@@ -530,12 +530,15 @@ input.searchBox.thin {
 .person.state-8, 
 .person.state-9, 
 .person.state-10, 
-.person.state-11 {
+.person.state-47, 
+.person.state-48, 
+.person.state-49 {
   color: #020B0D !important;
   background-color: #52AEE7;
   box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
   -webkit-box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
   -moz-box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
+  text-shadow: 1.5px 1px #d1d1e1;
 }
 /** Roman Empire */
 .person.state-12 {
@@ -781,6 +784,7 @@ input.searchBox.thin {
     -webkit-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
     -moz-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
 }
+
 
 /** -------------------- */
 /** style for each State */
