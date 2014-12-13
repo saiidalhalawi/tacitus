@@ -22,10 +22,10 @@ BarController.prototype.setBars = function(people){
 
 		tooltip = '<i class="name-on-bar">'+currPerson.name_en
 					+'<span>'+currPerson.name_en+'<br>'+currPerson.title_en
-					+'<br>'+String(currPerson.birth_year).substring(0, 4)+'-'
+					+'<br>'+String(currPerson.birth_year).substring(0, 4)+'&nbsp;-&nbsp;'
 					+String(currPerson.death_year).substring(0, 4)+'</span>'
 					+'</i>';
-		tmpBar = $('<div class="bar person state-'+currPerson.state_id+'">&nbsp;</div>')
+		tmpBar = $('<div class="bar person state-'+currPerson.state_id+' ">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 

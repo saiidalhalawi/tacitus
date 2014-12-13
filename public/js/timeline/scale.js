@@ -42,3 +42,8 @@ TimelineScale.prototype.init = function(){
 	$('#timebox').width(this.range*this.pxPerYear);
 }
 
+$(function() {
+	$('#timebox').mousemove(function(e){
+		
+	});	
+});
