@@ -12,7 +12,8 @@ BarController.prototype.setBars = function(people){
 		scaleObj = controller.scale, 
 		currPerson = null, 
 		tmpBar = null, 
-		tooltip = null;
+		tooltip = null, 
+		tmpSurvivalTime;
 
 	$.each(people, function(idx){
 		currPerson = this;
@@ -20,12 +21,23 @@ BarController.prototype.setBars = function(people){
 		currPerson.xEnd = Math.floor((currPerson.death_year - scaleObj.startDate) / 10000) * scaleObj.pxPerYear;
 		currPerson.width = currPerson.xEnd - currPerson.xStart;
 
-		tooltip = '<i class="name-on-bar">'+currPerson.name_en
-					+'<span>'+currPerson.name_en+'<br>'+currPerson.title_en
-					+'<br>'+String(currPerson.birth_year).substring(0, 4)+'&nbsp;-&nbsp;'
-					+String(currPerson.death_year).substring(0, 4)+'</span>'
-					+'</i>';
-		tmpBar = $('<div class="bar person state-'+currPerson.state_id+' ">&nbsp;</div>')
+		tmpSurvivalTime = currPerson.birth_year;
+		if(!currPerson.is_birth_year_fixed){
+			tmpSurvivalTime =+ '?';
+		}
+		tmpSurvivalTime =+ '&nbsp;-&nbsp;';
+		tmpSurvivalTime =+ currPerson.death_year;
+		if(!currPerson.is_death_year_fixed){
+			tmpSurvivalTime =+ '?';
+		}
+
+		tooltip = '<i class="name-on-bar">'+currPerson.name_en+'</i>';
+		tmpBar = $('<div class="bar person state-'+currPerson.state_id+' " data-name="'
+						+currPerson.name_en+'" data-title="'
+						+currPerson.title_en+'" data-live="'
+						+tmpSurvivalTime+'" data-state="'
+						+currPerson.state_id+'" data-explain="'
+						+currPerson.explanation_en+'">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 
@@ -36,4 +48,9 @@ BarController.prototype.setBars = function(people){
 					.html($(tooltip));
 		$('#timebox').append(tmpBar);
 	});
+}
+
+BarController.prototype.showDetail = function(id){
+
+
 }

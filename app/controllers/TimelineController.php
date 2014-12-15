@@ -11,7 +11,7 @@ class TimelineController extends \AppBaseController {
 	public function index()
 	{
 
-		$keywords = null;
+		$keywords = array();
 		if(Input::has('k')){
 			$keywords = explode(' ', Input::get('k'));
 		}
