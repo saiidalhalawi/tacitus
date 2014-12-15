@@ -21,14 +21,14 @@ BarController.prototype.setBars = function(people){
 		currPerson.xEnd = Math.floor((currPerson.death_year - scaleObj.startDate) / 10000) * scaleObj.pxPerYear;
 		currPerson.width = currPerson.xEnd - currPerson.xStart;
 
-		tmpSurvivalTime = currPerson.birth_year;
+		tmpSurvivalTime = currPerson.birth_year.toString();
 		if(!currPerson.is_birth_year_fixed){
-			tmpSurvivalTime =+ '?';
+			tmpSurvivalTime += '?';
 		}
-		tmpSurvivalTime =+ '&nbsp;-&nbsp;';
-		tmpSurvivalTime =+ currPerson.death_year;
+		tmpSurvivalTime += '&nbsp;-&nbsp;';
+		tmpSurvivalTime += currPerson.death_year.toString();
 		if(!currPerson.is_death_year_fixed){
-			tmpSurvivalTime =+ '?';
+			tmpSurvivalTime += '?';
 		}
 
 		tooltip = '<i class="name-on-bar">'+currPerson.name_en+'</i>';
