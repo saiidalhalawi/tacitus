@@ -18,6 +18,11 @@
 			<form name="searchOnTop" action="/timeline" method="GET">
 			    <input type="text" name="k" class="searchBox fl" placeholder="Find Stuff">
 			    <a onclick="document.forms.searchOnTop.submit();" href="#" class="btn fl mlrem">Search</a>
+			    <select class="lang-selection">
+					<option>Select your Language</option>
+					<option>English</option>
+					<option>Japanese</option>
+				</select>
 		    </form>
 		</div>
 	</section>

@@ -15,7 +15,7 @@ $(function() {
     });
 	*/
 	
-	var timelineScale = new TimelineScale(from - 50, to - 50), 
+	var timelineScale = new TimelineScale(from - 50, to + 50), 
 		barController = new BarController(timelineScale);
 	
 	var ajaxObj = new AjaxHandler();
