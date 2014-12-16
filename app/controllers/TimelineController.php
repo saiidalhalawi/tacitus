@@ -35,7 +35,11 @@ class TimelineController extends \AppBaseController {
 			}
 		}
 
+		// 国を取得
+		$states = new State();
+
 		return View::make('pages.timeline.index')
+					->with('stateNames', $states->retrieveWholeStateNames())
 					->with('from', $from)
 					->with('to', $to)
 					->with('words', implode(',', $words))

@@ -21,6 +21,12 @@
         var from = to = 0, 
             words = '';
     @endif
+
+    var stateNames = {
+    @foreach($stateNames as $statename)
+        {{{ $statename->id }}} : "{{{ $statename->name_en }}}",
+    @endforeach
+    };
 </script>
 
 @section('body')
