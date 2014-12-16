@@ -13,7 +13,9 @@ BarController.prototype.setBars = function(people){
 		currPerson = null, 
 		tmpBar = null, 
 		tooltip = null, 
-		tmpSurvivalTime;
+		tmpSurvivalTime, 
+		tmpYmd, 
+		tmpMmdd;
 
 	$.each(people, function(idx){
 		currPerson = this;
@@ -21,12 +23,23 @@ BarController.prototype.setBars = function(people){
 		currPerson.xEnd = Math.floor((currPerson.death_year - scaleObj.startDate) / 10000) * scaleObj.pxPerYear;
 		currPerson.width = currPerson.xEnd - currPerson.xStart;
 
-		tmpSurvivalTime = currPerson.birth_year.toString();
+		tmpYmd = currPerson.birth_year.toString();
+		tmpMmdd = tmpYmd.substr(-4);
+		tmpSurvivalTime = tmpYmd.replace(tmpMmdd, '');
+		if(tmpMmdd != '0000'){
+			tmpSurvivalTime += '/'+tmpYmd.substr(-4, 2)+'/'+tmpYmd.substr(-2);
+		}
 		if(!currPerson.is_birth_year_fixed){
 			tmpSurvivalTime += '?';
 		}
-		tmpSurvivalTime += '&nbsp;-&nbsp;';
-		tmpSurvivalTime += currPerson.death_year.toString();
+		tmpSurvivalTime += '&nbsp;〜&nbsp;';
+
+		tmpYmd = currPerson.death_year.toString();
+		tmpMmdd = tmpYmd.substr(-4);
+		tmpSurvivalTime += tmpYmd.replace(tmpMmdd, '');
+		if(tmpMmdd != '0000'){
+			tmpSurvivalTime += '/'+tmpYmd.substr(-4, 2)+'/'+tmpYmd.substr(-2);
+		}
 		if(!currPerson.is_death_year_fixed){
 			tmpSurvivalTime += '?';
 		}

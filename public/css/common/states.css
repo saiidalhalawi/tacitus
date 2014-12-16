@@ -11,6 +11,7 @@
   box-shadow: inset 0px -3px 20px 1px rgba(255,255,255,1);
     -webkit-box-shadow: inset 0px -3px 20px 1px rgba(255,255,255,1);
     -moz-box-shadow: inset 0px -3px 20px 1px rgba(255,255,255,1);
+  text-shadow: 1.5px 1.5px #4a4a4a;
 }
 /** France */
 .person.state-2 {
@@ -19,6 +20,7 @@
   box-shadow: inset 0px -3px 20px 1px rgba(219,201,7,1);
     -webkit-box-shadow: inset 0px -3px 20px 1px rgba(219,201,7,1);
     -moz-box-shadow: inset 0px -3px 20px 1px rgba(219,201,7,1);
+  text-shadow: 1.5px 1.5px #4a4a4a;
 }
 /** HRE */
 .person.state-3 {
@@ -27,6 +29,7 @@
   box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
     -webkit-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
     -moz-box-shadow: inset 0px -3px 20px 1px rgba(224,214,32,1);
+  text-shadow: 1.5px 1.5px #a88220;
 }
 /** Netherlands */
 .person.state-4 {
@@ -151,6 +154,9 @@
 /** Umayyad Caliphate */
 .person.state-22 {
   background-color: #fff;
+  color: #343538;
+  text-shadow: 1px 1px #a6f478;
+  border: solid 2px #a0e8bf;
 }
 /** Frankish Empire */
 .person.state-23, 
@@ -245,6 +251,8 @@
    box-shadow: inset inset 0px -3px 20px 1px rgba(8, 8, 9, 1);
    -webkit-box-shadow: inset 0px -3px 20px 1px rgba(8, 8, 9, 1);
    -moz-box-shadow: inset 0px -3px 20px 1px rgba(8, 8, 9, 1);
+   text-shadow: 1.5px 1.5px #0c0d0f;
+   color: #5b5b61;
 }
 /** Spanish Empire */
 .person.state-39 {
@@ -266,11 +274,11 @@
 /** Kingdom of Great Britain */
 .person.state-41 {
   color: #fff !important;
-   background-color: rgba(0, 6, 118, 1);
-   box-shadow: inset 6px -3px 15px 1px rgba(178, 9, 9, 0.76);
-   -webkit-box-shadow: inset 6px -3px 15px 1px rgba(178, 9, 9, 0.76);
-   -moz-box-shadow: inset 6px -3px 15px 1px rgba(178, 9, 9, 0.76);
-   text-shadow: 1px 1px red;
+   background-color: rgba(178, 9, 9, 0.85);
+   box-shadow: inset 6px -3px 15px 1px rgba(233, 234, 239, 1);
+   -webkit-box-shadow: inset 6px -3px 15px 1px rgba(233, 234, 239, 1);
+   -moz-box-shadow: inset 6px -3px 15px 1px rgba(233, 234, 239, 1);
+   text-shadow: 1.6px 1.6px rgb(13, 24, 228);
 }
 /** Kingdom of Prussia */
 .person.state-42 {

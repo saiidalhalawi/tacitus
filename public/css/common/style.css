@@ -542,6 +542,10 @@ input.searchBox.thin {
   border-bottom: dashed 1px #777;
   text-indent: 0.8rem;
 }
+.person-detail .detail-main ul li:first-child {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 .person-detail .detail-main ul li:last-child {
   overflow-y: scroll;
 }
