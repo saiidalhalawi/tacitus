@@ -1,6 +1,15 @@
 @extends('ancestors.base')
 
 @section('meta')
+
+@if($lang == 'ja')
+    <meta name="keywords" content="{{{ $from or 0}}}年,世界史,歴史,年表,タイムライン,{{{ $words or null}}}">
+    <meta name="description" content="世界の歴史をタイムラインから眺めよう！">
+@else
+    <meta name="keywords" content="{{{ $from or 0}}}, A.D, B.C,world history,history,biography,timeline,{{{ $words or null}}}">
+    <meta name="description" content="Overlook the World History. We can view that via timeline.">
+@endif
+
 <link rel="stylesheet" href="/css/common/states.css">
 <script src="/js/common/ajaxHandler.js"></script>
 <script src="/js/timeline/scale.js"></script>
@@ -14,6 +23,7 @@
 <script>
     @if(!empty($keywords))
         var keywords = '{{{ $keywords }}}', 
+            baseYear = {{{ $baseYear }}}
             from = {{{ $from or 0}}}, 
             to = {{{ $to or 0}}}, 
             words = '{{{ $words or null}}}';
@@ -26,7 +36,8 @@
     @foreach($stateNames as $statename)
         {{{ $statename->id }}} : "{{{ $statename->name_en }}}",
     @endforeach
-    };
+    }, 
+        lang = '{{{ $lang }}}';
 </script>
 
 @section('body')
@@ -46,12 +57,14 @@
     <main id="main-content">
     	<section>
 	        <section id="timebox">
-	        	<span class="vector prev">&lt;</span>
-	            <div class="inner-arrow">&nbsp;
-	                  <span class="y-index start"></span>
-	                  <span class="y-index end"></span>
-	            </div>
-	            <span class="vector next">&gt;</span>
+                <div>
+    	        	<span class="vector prev">&lt;</span>
+    	            <div class="inner-arrow">&nbsp;
+    	                  <span class="y-index start"></span>
+    	                  <span class="y-index end"></span>
+    	            </div>
+	               <span class="vector next">&gt;</span>
+                </div>
 	        </section>
         </section>
 
@@ -59,15 +72,11 @@
             <div class="detail-main">
                 <div class="close-button"><b></b><b></b><b></b><b></b></div>
                 <ul>
-                    <li>Elizabeth I of England</li>
-                    <li>Queen of England</li>
-                    <li>1533/09/07 - 1603/03/24</li>
-                    <li>Kingdom of England</li>
-                    <li>
-                        <p>
-                             Queen of England and Ireland, and the daughter of Henry VIII. The childless Elizabeth was the fifth and last monarch of the Tudor dynasty. Elizabeth was the daughter of Henry VIII by second wife, Anne Boleyn, who was executed two and a half years after Elizabeth's birth. Anne's marriage to Henry VIII was annulled, and Elizabeth was declared illegitimate. Her half-brother, Edward VI, ruled until his death in 1553, bequeathing the crown to Lady Jane Grey and ignoring the claims of his two half-sisters, Elizabeth and the Roman Catholic Mary, in spite of statute law to the contrary. However, Edward's will was set aside and Mary became queen, deposing Lady Jane Grey. During Mary's reign, Elizabeth was imprisoned for nearly a year on suspicion of supporting Protestant rebels.        
-                        </p>
-                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><p></p></li>
                 </ul>
             </div>
         </div>

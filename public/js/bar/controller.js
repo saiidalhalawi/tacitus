@@ -3,6 +3,7 @@ function BarController(timelineScale){
 	this.startYear = timelineScale.startYear;
 	this.endYear = timelineScale.endYear;
 	this.scale = timelineScale;
+	this.peopleCountLimit = 30;
 	this.verticalMargin = 50;
 }
 
@@ -44,13 +45,13 @@ BarController.prototype.setBars = function(people){
 			tmpSurvivalTime += '?';
 		}
 
-		tooltip = '<i class="name-on-bar">'+currPerson.name_en+'</i>';
+		tooltip = '<i class="name-on-bar">'+currPerson.name+'</i>';
 		tmpBar = $('<div class="bar person state-'+currPerson.state_id+' " data-name="'
-						+currPerson.name_en+'" data-title="'
-						+currPerson.title_en+'" data-live="'
+						+currPerson.name+'" data-title="'
+						+currPerson.title+'" data-live="'
 						+tmpSurvivalTime+'" data-state="'
 						+currPerson.state_id+'" data-explain="'
-						+currPerson.explanation_en+'">&nbsp;</div>')
+						+escapeQ(currPerson.explanation)+'">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 

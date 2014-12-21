@@ -12,7 +12,7 @@
 */
 
 // 画面アクション
-Route::get('/', 'TopController@index');
+Route::get('/', array('as' => 'home', 'uses' => 'TopController@index'));
 Route::get('/timeline', 'TimelineController@index');
 
 // REST

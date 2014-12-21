@@ -25,11 +25,13 @@ class TimelineController extends \AppBaseController {
 				$words[] = $keyword;
 			}
 		}
+		$baseYear = 0;
 		if(!empty($numbers)){
 			if(count($numbers) > 1){
-				$from = $numbers[0];
+				$from = $baseYear = $numbers[0];
 				$to = $numbers[1];
 			}else{
+				$baseYear  = $numbers[0];
 				$from = $numbers[0] - 100;
 				$to = $numbers[0] + 100;
 			}
@@ -40,6 +42,7 @@ class TimelineController extends \AppBaseController {
 
 		return View::make('pages.timeline.index')
 					->with('stateNames', $states->retrieveWholeStateNames())
+					->with('baseYear', $baseYear)
 					->with('from', $from)
 					->with('to', $to)
 					->with('words', implode(',', $words))

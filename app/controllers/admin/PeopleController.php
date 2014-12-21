@@ -48,6 +48,8 @@ class PeopleController extends \AdminBaseController {
             $person->name_jp = Input::get('name_jp');
             $person->birth_year = Input::get('birth_year');
             $person->death_year = Input::get('death_year');
+            if(Input::get('birth_year_fixed')) $person->is_birth_year_fixed = true;
+            if(Input::get('death_year_fixed')) $person->is_death_year_fixed = true;
             $person->title_en = Input::get('title_en');
             $person->title_jp = Input::get('title_jp');
             $person->explanation_en = Input::get('explanation_en');
@@ -97,6 +99,8 @@ class PeopleController extends \AdminBaseController {
 
         $person->birth_year = Input::get('birth_year');
         $person->death_year = Input::get('death_year');
+        if(Input::get('birth_year_fixed')) $person->is_birth_year_fixed = true;
+        if(Input::get('death_year_fixed')) $person->is_death_year_fixed = true;
         $person->title_en = Input::get('title_en');
         $person->title_jp = Input::get('title_jp');
         $person->explanation_en = Input::get('explanation_en');
