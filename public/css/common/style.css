@@ -424,6 +424,10 @@ input.searchBox.thin {
   opacity: 0.75;
   cursor: url('/images/common/ui/grab.cur'), none;
 }
+#timebox>div{
+  width: 90%;
+  margin: 0 auto;
+}
 
 .vector {
   position: fixed;
@@ -451,6 +455,7 @@ input.searchBox.thin {
 .inner-arrow {
   position: absolute;
   bottom: 25%;
+  left: -10;
   border-top-style: dashed;
   border-top-width: 2px;
   border-top-color: #ddd;
@@ -465,7 +470,7 @@ input.searchBox.thin {
   bottom: -10;
 }
 .y-index.start {
-  left: 20;
+  left: 10;
 }
 .y-index.mid {
   left: 550; 
@@ -509,10 +514,10 @@ input.searchBox.thin {
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   z-index: 2000;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(-0.3, #ccc), color-stop(1, #666));
-  background-image: -moz-linear-gradient(left, #ccc -20%, #666 100%);
-  background-image: -webkit-linear-gradient(left, #ccc -20%, #666 100%);
-  background-image: linear-gradient(to right, #ccc -20%, #666 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(-0.2, #ccc), color-stop(1, #666));
+  background-image: -moz-linear-gradient(left, #ccc -10%, #666 100%);
+  background-image: -webkit-linear-gradient(left, #ccc -10%, #666 100%);
+  background-image: linear-gradient(to right, #ccc -10%, #666 100%);
   opacity: 0;
     -moz-transition: opacity 0.6s ease-in-out;
     -o-transition: opacity 0.6s ease-in-out;

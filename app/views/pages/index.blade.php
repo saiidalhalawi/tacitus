@@ -20,7 +20,7 @@
 		@endif
 		<div class="search-area">
 			<form name="searchOnTop" action="/timeline" method="GET">
-			    <input type="text" name="k" class="searchBox fl" placeholder="Find Stuff">
+			    <input type="text" name="k" class="searchBox fl" placeholder="Find Stuff" required>
 			    <a onclick="document.forms.searchOnTop.submit();" href="#" class="btn fl mlrem">Search</a>
 			    @if($lang == 'ja')
 					<select class="lang-selection" onchange="javascript:location.href = this.value;">
