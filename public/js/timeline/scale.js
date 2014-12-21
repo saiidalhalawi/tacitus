@@ -41,7 +41,8 @@ TimelineScale.prototype.coverBackground = function(){
 					.append(
 						midYearPoint.clone()
 								.css('left', (dividePoint*3)*this.pxPerYear)
-								.html(this.midPoint3));
+								.html(this.midPoint3))
+					.css('bottom', '30%');
 	$(index[1]).html(this.endYear).css('left', this.range*this.pxPerYear);
 
 	$('#timebox').width(this.range*this.pxPerYear);
