@@ -81,16 +81,17 @@ class StateController extends \AdminBaseController {
      * @return Response
      */
 	public function update($id){
+
 		$state = State::find($id);
         $state->name_en = Input::get('name_en');
         $state->name_jp = Input::get('name_jp');
         $state->region_id = Input::get('region_id');
         $state->rise_year = Input::get('rise_year');
-        if(Input::has('is_rise_year_fixed')) $state->is_rise_year_fixed = Input::get('is_rise_year_fixed');
+        if(Input::has('is_rise_year_fixed')) $state->is_rise_year_fixed = true;
         $state->fall_year = Input::get('fall_year');
-        if(Input::has('is_fall_year_fixed')) $state->is_fall_year_fixed = Input::get('is_fall_year_fixed');
-        $state->title_en = Input::get('title_en');
-        $state->title_jp = Input::get('title_jp');
+        if(Input::has('is_fall_year_fixed')) $state->is_fall_year_fixed = true;
+        $state->capital_name_en = Input::get('capital_name_en');
+        $state->capital_name_jp = Input::get('capital_name_jp');
         $state->explanation_en = Input::get('explanation_en');
         $state->explanation_jp = Input::get('explanation_jp');
         $state->save();

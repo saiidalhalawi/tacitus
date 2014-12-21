@@ -6,7 +6,7 @@
 @section('body')
 
 	<section class="panel">
-        {{ Form::open(array('url' => '/admin/invention/' .$invention->id ,'method' => 'PUT')) }}
+        {{ Form::open(array('url' => '/admin/invention/' . $invention->id ,'method' => 'PUT')) }}
             <div class="row">
                 <div class="large-6 columns">
                     <span>ID:{{$invention->id}}</span>
@@ -25,8 +25,10 @@
                         <span>is fixed?</span>&nbsp;<input name="is_occured_year_fixed" type="checkbox" checked required>
                     </label>
                     <label>state :
-                        <select>
-                            <option value="-">-</option>
+                        <select name="state_id">
+                            @foreach($states as $state)
+                                <option value="{{{$state->id}}}">{{{ $state->name_en }}}&nbsp;</option>
+                            @endforeach
                         </select>
                     </label>
                     <label>explanation_en :</label>
