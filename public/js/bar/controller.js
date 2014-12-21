@@ -4,7 +4,7 @@ function BarController(timelineScale){
 	this.endYear = timelineScale.endYear;
 	this.scale = timelineScale;
 	this.peopleCountLimit = 30;
-	this.verticalMargin = 50;
+	this.verticalMargin = 45;
 }
 
 BarController.prototype.setBars = function(people){
@@ -16,7 +16,8 @@ BarController.prototype.setBars = function(people){
 		tooltip = null, 
 		tmpSurvivalTime, 
 		tmpYmd, 
-		tmpMmdd;
+		tmpMmdd, 
+		tmpInnerArrow;
 
 	$.each(people, function(idx){
 		currPerson = this;
@@ -61,6 +62,13 @@ BarController.prototype.setBars = function(people){
 					.attr('person_id', currPerson.id)
 					.html($(tooltip));
 		$('#timebox').append(tmpBar);
+
+		if(idx > 0 && idx % 20 == 0){
+			// 年号表示線を追加
+			tmpInnerArrow = $('.inner-arrow').clone(false);
+			tmpInnerArrow.css('top', $('#timebox')[0].scrollHeight+'px')
+				.appendTo($('#timebox'));
+		}
 	});
 }
 

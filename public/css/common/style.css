@@ -454,7 +454,6 @@ input.searchBox.thin {
 
 .inner-arrow {
   position: absolute;
-  bottom: 25%;
   left: -10;
   border-top-style: dashed;
   border-top-width: 2px;

@@ -37,7 +37,8 @@ class SearchController extends \ApiBaseController
             $people = $people->where('region_id','=',Input::get('region_id'));
         }
         
-		$people = $people->orderBy('people.id');
+		$people = $people->orderBy('people.birth_year')
+                            ->orderBy('people.death_year');
 
         $limit = Input::get('limit', self::$DEFAULT_ITEM_COUNT);
         if(is_numeric($limit)){
