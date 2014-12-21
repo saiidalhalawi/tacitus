@@ -19,11 +19,11 @@ $(function() {
 		barController = new BarController(timelineScale);
 	
 	var ajaxObj = new AjaxHandler();
-	ajaxObj.url = '/rest/en/search/people';
+	ajaxObj.url = '/rest/'+lang+'/search/people';
 	ajaxObj.data = {
 					from: from * 10000, 
 					to: to * 10000, 
-					limit: 30
+					limit: 50
 				}
 	
 	ajaxObj.callbackSuccess = function(data){
