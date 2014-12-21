@@ -19,6 +19,12 @@ class SearchController extends \ApiBaseController
      */    
 	public function people($lang){
 
+        // validate
+        $validate = Validator::make(Input::get(),Config::get('rules.search_rules'));
+        if($validate->fails()){
+            return $this->renderResponse(Config::get('api.response_code.PARAM_ERROR'));
+        }
+        // where
 		$people=Person::where('birth_year','<=',Input::get('to'))
     		->leftJoin('person_types', 'people.id', '=', 'person_types.perspon_id')
 	       	->where('death_year','>=',Input::get('from'));
@@ -37,6 +43,20 @@ class SearchController extends \ApiBaseController
         if(is_numeric($limit)){
             $people = $people->take($limit);
         }
+        $colmn_lang = $lang;
+        if($lang == 'ja'){
+            $colmn_lang = 'jp';
+        }
+        // select
+        $pepole = $people->select('people.id')
+        ->addSelect('name_'.$colmn_lang.' as name')
+        ->addSelect('birth_year')
+        ->addSelect('is_birth_year_fixed')
+        ->addSelect('death_year')
+        ->addSelect('is_death_year_fixed')
+        ->addSelect('state_id')
+        ->addSelect('explanation_'.$colmn_lang.' as explanation')
+        ->addSelect('title_'.$colmn_lang.' as title');
         $ret = $people->get();
 
         return $this->renderResponse($ret);
