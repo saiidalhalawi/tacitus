@@ -68,13 +68,14 @@
 .person.state-10, 
 .person.state-47, 
 .person.state-48, 
-.person.state-49 {
-  color: #020B0D !important;
+.person.state-49, 
+.person.state-53  {
+  color: #100728  !important;
   background-color: #52AEE7;
-  box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
-  -webkit-box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
-  -moz-box-shadow: inset 0px -3px 20px 1px rgba(208, 208, 211, 1);
-  text-shadow: 1.5px 1px #d1d1e1;
+  box-shadow: inset 6px -6px 15px 5px rgba(216, 216, 223, 0.9);
+  -webkit-box-shadow: inset 6px -6px 15px 5px rgba(216, 216, 223, 0.9);
+  -moz-box-shadow: inset 6px -6px 15px 5px rgba(216, 216, 223, 0.9);
+  text-shadow: 1.5px 1.5px #fcfcfc;
 }
 /** Roman Empire */
 .person.state-12 {
@@ -235,6 +236,7 @@
   box-shadow: inset 6px -3px 5px 1px rgba(87, 1, 1, 0.6);
     -webkit-box-shadow: inset 6px -3px 5px 1px rgba(87, 1, 1, 0.6);
     -moz-box-shadow: inset 6px -3px 5px 1px rgba(87, 1, 1, 0.6);
+  text-shadow: 1.5px 1.5px #d3bcb6;
 }
 /** Hafsid dynasty */
 .person.state-37 {
@@ -305,12 +307,14 @@
   text-shadow: 1px 1px #E7042F;
 }
 /** Russia */
-.person.state-45 {
+.person.state-45, 
+.person.state-57 {
   color: #fff !important;
   background-color: #2d0ce8;
-  box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
-    -webkit-box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
-    -moz-box-shadow: inset 0px -3px 20px 1px rgba(219,153,20,1);
+  box-shadow: inset 6px -5px 20px 3px rgba(223, 140, 47, 1);
+    -webkit-box-shadow: inset 6px -5px 20px 3px rgba(223, 140, 47, 1);
+    -moz-box-shadow: inset 6px -5px 20px 3px rgba(223, 140, 47, 1);
+  text-shadow: 2.5px 1.5px #89491C;
 }
 /** French Republic */
 .person.state-46 {
@@ -321,6 +325,60 @@
   -webkit-box-shadow: inset 0px -3px 20px 1px rgba(236, 4, 39, 1);
   text-shadow: 1px 1px #f00;
 }
+/** Maurya Empire */
+.person.state-50 {
+  color: #fff !important;
+  background-color: #c37cec;
+  box-shadow: inset 5px -6px 10px 1px rgba(107, 52, 144, 1);
+  -webkit-box-shadow: inset 5px -6px 10px 1px rgba(107, 52, 144, 1);
+  -moz-box-shadow: inset 5px -6px 10px 1px rgba(107, 52, 144, 1);
+  text-shadow: 2px 2px #222225;
+}
+/** Kushan Empire */
+.person.state-51 {
+  color: #fff !important;
+  background-color: #0B7718;
+  box-shadow: inset 10px -5px 20px 10px rgba(6, 6, 6, 1);
+  -webkit-box-shadow: inset 10px -5px 20px 10px rgba(6, 6, 6, 1);
+  -moz-box-shadow: inset 10px -5px 20px 10px rgba(6, 6, 6, 1);
+  text-shadow: 2px 2px #906376;
+}
+/** Mari Empire */
+.person.state-52 {
+  color: #303030 !important;
+  background-color: #947f13;
+  box-shadow: inset inset 5px -3px 10px 5px rgba(84, 70, 35, 1);
+  -webkit-box-shadow: inset 5px -3px 10px 5px rgba(84, 70, 35, 1);
+  -moz-box-shadow: inset 5px -3px 10px rgba(84, 70, 35, 1);
+  text-shadow: 1.5px 1px #181717;
+}
+/** Achaemenid Empire */
+.person.state-54 {
+  color: #fff;
+  background-color: #37deec;
+  box-shadow: inset inset 10px -6px 10px 1px rgba(10, 10, 10, 1);
+  -webkit-box-shadow: inset inset 10px -6px 10px 1px rgba(10, 10, 10, 1);
+  -moz-box-shadow: inset 5px -3px 10px
+  text-shadow: 2.5px 2px #181717;
+}
+/** Carthage */
+.person.state-55 {
+  color: #100F0F !important;
+  background-color: #E24006;
+  box-shadow: inset 0px -3px 20px 1px rgba(234, 230, 230, 1);
+  -webkit-box-shadow: inset 0px -3px 20px 1px rgba(234, 230, 230, 1);
+  -moz-box-shadow: inset 0px -3px 20px 1px rgba(234, 230, 230, 1);
+}
+/** Republic of Venice */
+.person.state-56 {
+  color: #fff;
+  background-color: #BE3CE2;
+  box-shadow: inset 7px -6px 20px 1px rgba(234, 230, 230, 1);
+  -webkit-box-shadow: inset 7px -6px 20px 1px rgba(234, 230, 230, 1);
+  -moz-box-shadow: inset 7px -6px 20px 1px rgba(234, 230, 230, 1);
+  text-shadow: 2px 2px #222;
+}
+
 /** Italy */
 .person.state- {
   background-color: #fff;

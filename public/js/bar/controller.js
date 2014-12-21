@@ -50,7 +50,7 @@ BarController.prototype.setBars = function(people){
 						+currPerson.title_en+'" data-live="'
 						+tmpSurvivalTime+'" data-state="'
 						+currPerson.state_id+'" data-explain="'
-						+currPerson.explanation_en+'">&nbsp;</div>')
+						+escapeQ(currPerson.explanation_en)+'">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 

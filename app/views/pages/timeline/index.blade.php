@@ -26,7 +26,8 @@
     @foreach($stateNames as $statename)
         {{{ $statename->id }}} : "{{{ $statename->name_en }}}",
     @endforeach
-    };
+    }, 
+        lang = '{{{ $lang }}}';
 </script>
 
 @section('body')
