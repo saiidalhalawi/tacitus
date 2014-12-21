@@ -6,7 +6,7 @@
 @section('body')
 
 	<section class="panel">
-        {{ Form::open(array('url' => '/admin/people/' .$person->id ,'method' => 'PUT')) }}
+        {{ Form::open(array('url' => '/admin/people/' . $person->id ,'method' => 'PUT')) }}
             <div class="row">
                 <div class="large-6 columns">
                     <span>ID:{{$person->id}}</span>

@@ -28,9 +28,11 @@
                         <input name="birth_year" type="number" value="" placeholder="yyyy or yyyymmdd" required>
                         <span>is fixed?</span>&nbsp;<input name="occured_year_fixed" type="checkbox" checked required>
                     </label>
-                    <label>region :
-                        <select>
-                            <option value="-">-</option>
+                    <label>state :
+                        <select name="state_id">
+                            @foreach($states as $state)
+                                <option value="{{{$state->id}}}">{{{ $state->name_en }}}&nbsp;</option>
+                            @endforeach
                         </select>
                     </label>
                     <label>explanation_en :</label>

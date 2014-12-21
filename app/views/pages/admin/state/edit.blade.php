@@ -6,13 +6,19 @@
 @section('body')
 
     <section class="panel">
-        {{ Form::open(array('url' => '/admin/state')) }}
+        {{ Form::open(array('url' => '/admin/state/' . $state->id, 'method' => 'PUT')) }}
             <div class="row">
                 <div class="large-6 columns">
                     <label>region :
                         <select name="region_id">
                             @foreach($REGIONS as $ID => $REGION)
-                                <option value="{{{$ID}}}">{{{ strtolower($REGION['en']) }}}</option>
+                                @if($state->region_id == $ID)
+                                    <option value="{{{$ID}}}" selected>
+                                @else
+                                    <option value="{{{$ID}}}">
+                                @endif
+                                    {{{ strtolower($REGION['en']) }}}
+                                </option>
                             @endforeach
                         </select>
                     </label>

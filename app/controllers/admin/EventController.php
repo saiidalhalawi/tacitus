@@ -40,8 +40,9 @@ class EventController extends \AdminBaseController {
         $event = new HistoricalEvent;
         $event->name_en = Input::get('name_en');
         $event->name_jp = Input::get('name_jp');
-        $event->birth_year = Input::get('birth_year');
-        $event->death_year = Input::get('death_year');
+        $event->state_id = Input::get('state_id');
+        $event->occured_year = Input::get('occured_year');
+        if(Input::has('is_occured_year_fixed')) $state->is_occured_year_fixed = true;
         $event->explanation_en = Input::get('explanation_en');
         $event->explanation_jp = Input::get('explanation_jp');
         $event->save();
@@ -75,10 +76,9 @@ class EventController extends \AdminBaseController {
 		$event = HistoricalEvent::find($id);
         $event->name_en = Input::get('name_en');
         $event->name_jp = Input::get('name_jp');
-        $event->birth_year = Input::get('birth_year');
-        $event->death_year = Input::get('death_year');
-        $event->title_en = Input::get('title_en');
-        $event->title_jp = Input::get('title_jp');
+        $event->state_id = Input::get('state_id');
+        $event->occured_year = Input::get('occured_year');
+        if(Input::has('is_occured_year_fixed')) $state->is_occured_year_fixed = true;
         $event->explanation_en = Input::get('explanation_en');
         $event->explanation_jp = Input::get('explanation_jp');
         $event->save();
