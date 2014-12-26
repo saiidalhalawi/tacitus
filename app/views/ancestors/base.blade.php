@@ -22,14 +22,14 @@
 
 			<nav>
 		        <ul class="navigation-menu">
-		            <li><a href="#0">About</a></li>
+		            <li><a href="/about">About</a></li>
 		            <li><a href="#0">Contact us</a></li>
 		            <li><a href="#0">API documentation</a></li>
 		        </ul>
 		    </nav>
 		</article>
 
-		@yield("footer")
+		@include('includes.footer')
 
 		<div class="loading hidden"><img src="/images/common/ui/loading.gif"></div>
 	</body>

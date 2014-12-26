@@ -14,9 +14,12 @@
 	<section id="pageTitle">
 		<h1>Chronicler</h1>
 		@if($lang == 'ja')
-			<p>タイムラインから世界史を見渡そう</p>
+			<p>世界の歴史を視覚化<br>とりあえず眺めてみよう！</p>
 		@else
-			<p>Overlook the World History.<br>We can view that via timeline.</p>
+			<p>
+				You can visualize the World History.<br>
+				Let's overlook first of all !
+			</p>
 		@endif
 		<div class="search-area">
 			<form name="searchOnTop" action="/timeline" method="GET">

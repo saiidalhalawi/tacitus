@@ -49,13 +49,23 @@ i:before {
   display: none;
 }
 
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+  width: 0.75rem;
 }
+::-webkit-scrollbar-thumb {
+  background-color: rgb(221, 225, 236);
+  outline: 1px solid rgb(176, 177, 186);
+}
+
 
 /* -----------------------------------------------------
   hack foundation style
 ----------------------------------------------------- */
+
+h1, h2, h3 {
+  color: #fff !important ;
+  text-shadow: 1px 1px #dcdddc;
+}
 
 ul.navigation-menu {
   margin: 0 !important;
@@ -120,6 +130,25 @@ ul.navigation-menu {
     background-color: rgba(2, 23, 37, 0.96);
   }
 }
+
+div.title-on-header {
+  font-size: 2.5rem;
+  font-family: Lekton, sans-serif;
+  width: 11rem;
+  height: 2rem;
+  padding: 1.5rem 1rem;
+}
+div.title-on-header a {
+  color: #fff ;
+  text-decoration: none;
+}
+div.title-on-header a:hover {
+  color: #7FDBFF;
+}
+div.title-on-header a:active {
+  color: #0074D9;
+}
+
 .switch-navigation {
   position: absolute;
   right: 0;
@@ -317,13 +346,14 @@ ul.navigation-menu {
   border-radius: 15px;
   -webkit-border-radius: 15px;
   padding: 5px;
-  box-shadow: inset 0 0 5px rgba(000,000,000, 0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(23, 21, 39, 0.52) !important;
   text-shadow: 1px 1px #222;
   width: 11.5rem;
 }
 .lang-selection:hover {
-
+  box-shadow: inset 0 0 5px rgba(5, 5, 5, 0.75);
+  background-color: rgba(14, 46, 51, 0.75) !important;
 }
 .lang-selection option {
   padding: 0.5rem 0;
@@ -352,6 +382,30 @@ ul.navigation-menu {
 #pageTitle p {
 	font-size: 2rem;
 	font-weight: lighter;
+}
+
+.static-content {
+  position: fixed;
+  background-color: #3a3a3a;
+  opacity: 0.75;
+  color: #fff;
+}
+.static-content.full {
+  width: 100%;
+  height: 100%;
+  top: 13%;
+  overflow-y: scroll;
+}
+.static-content.full div {
+  left: 10%;
+  width: 75%;
+  margin: auto;
+}
+.static-content ul {
+  font-size: 1.5rem;
+}
+.static-content ul li {
+  margin: 1rem auto;
 }
 
 input.searchBox {
@@ -427,6 +481,9 @@ input.searchBox.thin {
 #timebox>div{
   width: 90%;
   margin: 0 auto;
+}
+#timebox::-webkit-scrollbar { 
+    display: none; 
 }
 
 .vector {
@@ -508,7 +565,7 @@ input.searchBox.thin {
   position: fixed;
   right: -100%;
   width: 60%;
-  height: auto;
+  height: 90%;
   transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
@@ -536,10 +593,15 @@ input.searchBox.thin {
   -webkit-transform: rotate(5deg);
   transition: .8s;
   width: 90%;
+  height: 100%;
   background-image: -webkit-gradient(linear, left top, right bottom, color-stop(-0.8, #fff), color-stop(1, #d6d6d6));
   background-image: -moz-linear-gradient(top left, #fff 80%, #d6d6d6 100%);
   background-image: -webkit-linear-gradient(top left, #fff 80%, #d6d6d6 100%);
   background-image: linear-gradient(to bottom right, #fff 80%, #d6d6d6 100%);
+}
+.person-detail .detail-main ul {
+  height: 100%;
+  overflow: hidden;
 }
 .person-detail .detail-main ul li {
   margin-top: 0.5rem;
@@ -551,9 +613,15 @@ input.searchBox.thin {
   font-weight: bold;
 }
 .person-detail .detail-main ul li:last-child {
-  overflow-y: scroll;
+  height: 75%;
+}
+.person-detail .detail-main ul li:last-child p {
+  overflow-y: scroll !important;
+  height: 100%;
+  padding-right: 1rem;
 }
 
+/* -UI petterns- */
 .close-button {
   position: relative;
   width: 25px;
@@ -598,3 +666,10 @@ input.searchBox.thin {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
+
+.back-to-top {
+  float: right;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+/* -UI petterns- */

@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
 		if( $('.navigation-menu').hasClass('is-visible') ) {
 			$('.navigation-menu').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
-				/*$('.search-area').find("input[type='text']").toggle();*/
+				$('.title-on-header').toggle();
 			});
 			
 		} else {
@@ -45,7 +45,7 @@ jQuery(document).ready(function($){
 			});
 			/*$('.search-area').find("input[type='text']").toggle();*/
 		}
-		$('.search-area').toggleClass('hidden');
+		$('.title-on-header').toggle();
 
 	});
 });
