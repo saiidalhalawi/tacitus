@@ -42,26 +42,27 @@ class PeopleController extends \AdminBaseController {
      * @return Response
      */
 	public function store(){
-           // people
-            $person = new Person;
-            $person->name_en = Input::get('name_en');
-            $person->name_jp = Input::get('name_jp');
-            $person->birth_year = Input::get('birth_year');
-            $person->death_year = Input::get('death_year');
-            if(Input::get('birth_year_fixed')) $person->is_birth_year_fixed = true;
-            if(Input::get('death_year_fixed')) $person->is_death_year_fixed = true;
-            $person->title_en = Input::get('title_en');
-            $person->title_jp = Input::get('title_jp');
-            $person->explanation_en = Input::get('explanation_en');
-            $person->explanation_jp = Input::get('explanation_jp');
-            $person->save();
+        // people
+        $person = new Person;
+        $person->name_en = Input::get('name_en');
+        $person->name_jp = Input::get('name_jp');
+        $person->state_id = Input::get('state_id');
+        $person->birth_year = Input::get('birth_year');
+        $person->death_year = Input::get('death_year');
+        $person->is_birth_year_fixed = (Input::has('is_birth_year_fixed'))? true : false;
+        $person->is_death_year_fixed = (Input::has('is_death_year_fixed'))? true : false;
+        $person->title_en = Input::get('title_en');
+        $person->title_jp = Input::get('title_jp');
+        $person->explanation_en = Input::get('explanation_en');
+        $person->explanation_jp = Input::get('explanation_jp');
+        $person->save();
 
-            // type
-            if(Input::get('person_type_id')){
-	            $person_type = new PersonType;
-    	        $person_type->type_code = Input::get('person_type_id');
-        	    $person_type = $person->person_types()->save($person_type);
-            }
+        // type
+        if(Input::get('person_type_id')){
+            $person_type = new PersonType;
+	        $person_type->type_code = Input::get('person_type_id');
+    	    $person_type = $person->person_types()->save($person_type);
+        }
 
          //redirect
          Session::flash('message','Success create.');
@@ -91,16 +92,15 @@ class PeopleController extends \AdminBaseController {
      * @return Response
      */
 	public function update($id){
+        
 		$person = Person::find($id);
         $person->name_en = Input::get('name_en');
         $person->name_jp = Input::get('name_jp');
-
         $person->state_id = Input::get('state_id');
-
         $person->birth_year = Input::get('birth_year');
         $person->death_year = Input::get('death_year');
-        if(Input::get('birth_year_fixed')) $person->is_birth_year_fixed = true;
-        if(Input::get('death_year_fixed')) $person->is_death_year_fixed = true;
+        $person->is_birth_year_fixed = (Input::has('is_birth_year_fixed'))? true : false;
+        $person->is_death_year_fixed = (Input::has('is_death_year_fixed'))? true : false;
         $person->title_en = Input::get('title_en');
         $person->title_jp = Input::get('title_jp');
         $person->explanation_en = Input::get('explanation_en');

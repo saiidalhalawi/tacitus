@@ -42,7 +42,7 @@ class InventionController extends \AdminBaseController {
         $invention->name_en = Input::get('name_en');
         $invention->name_jp = Input::get('name_jp');
         $invention->occured_year = Input::get('birth_year');
-        $invention->is_occured_year_fixed = Input::get('is_occured_year_fixed');
+        $invention->is_occured_year_fixed = true;
         $invention->state_id = Input::get('state_id');
         $invention->explanation_en = Input::get('explanation_en');
         $invention->explanation_jp = Input::get('explanation_jp');
