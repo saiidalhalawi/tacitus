@@ -14,7 +14,7 @@ TimelinePanel.prototype.createPersonDetail = function(bar){
 		.next().html($(bar).data('title'))
 		.next().html($(bar).data('live'))
 		.next().html(stateNames[$(bar).data('state')])
-		.next().html($(bar).data('explain'));
+		.next().find('p').html($(bar).data('explain'));
 	// オープン
 	$('#person-detail-panel').addClass('active');
 }

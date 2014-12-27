@@ -33,9 +33,15 @@
     @endif
 
     var stateNames = {
-    @foreach($stateNames as $statename)
-        {{{ $statename->id }}} : "{{{ $statename->name_en }}}",
-    @endforeach
+    @if($lang == 'ja')
+        @foreach($stateNames as $statename)
+            {{{ $statename->id }}} : "{{{ $statename->name_jp }}}",
+        @endforeach
+    @else
+        @foreach($stateNames as $statename)
+            {{{ $statename->id }}} : "{{{ $statename->name_en }}}",
+        @endforeach
+    @endif
     }, 
         lang = '{{{ $lang }}}';
 </script>

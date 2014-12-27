@@ -12,7 +12,7 @@ class State extends BaseModel {
 	 */
 	public function retrieveWholeStateNames($takeJapanese = false){
 
-		$lang = ($takeJapanese)? 'name_ja' : 'name_en';
+		$lang = ($takeJapanese)? 'name_jp' : 'name_en';
 		return DB::table('states')->select('id', $lang)->get();
 	}
 

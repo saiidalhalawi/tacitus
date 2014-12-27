@@ -11,15 +11,20 @@
 |
 */
 
-// 画面アクション
-Route::get('/', array('as' => 'home', 'uses' => 'TopController@index'));
-Route::get('/timeline', 'TimelineController@index');
+/* 画面アクション */
 
-// REST
+// TOPページ
+Route::get('/', array('as' => 'home', 'uses' => 'TopController@index'));
+// メインページ
+Route::get('/timeline', 'TimelineController@index');
+// ABOUTページ
+Route::get('about', 'PagesController@about');
+
+/* REST */
 Route::any('/rest/{lang}/search/people', 'SearchController@people');
 
 
-// Admin
+/* Admin */
 Route::group(array('prefix' => 'admin'), function()
 {
 	Route::resource('people', 'PeopleController');

@@ -39,9 +39,10 @@ class TimelineController extends \AppBaseController {
 
 		// 国を取得
 		$states = new State();
+		$takeJapanese = ($this->lang == 'ja')? true : false;
 
 		return View::make('pages.timeline.index')
-					->with('stateNames', $states->retrieveWholeStateNames())
+					->with('stateNames', $states->retrieveWholeStateNames($takeJapanese))
 					->with('baseYear', $baseYear)
 					->with('from', $from)
 					->with('to', $to)
