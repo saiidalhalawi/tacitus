@@ -15,6 +15,6 @@ return array(
 
 	'debug' => false, 
 
-	'url' => 'a.chronicler.info'
+	'url' => 'tacitus.chronicler.info'
 
 );
