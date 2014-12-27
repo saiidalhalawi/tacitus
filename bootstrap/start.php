@@ -29,7 +29,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('homestead'), 
-	'production' => array('a.chronicler.info'),
+	'production' => array('tacitus.chronicler.info'),
 ));
 
 /*
