@@ -15,6 +15,6 @@ return array(
 
 	'debug' => false, 
 
-	'url' => 'chronicler.info'
+	'url' => 'a.chronicler.info'
 
 );
