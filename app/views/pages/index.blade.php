@@ -18,7 +18,7 @@
 		@else
 			<p>
 				You can visualize the World History.<br>
-				Let's overlook first of all !
+				Let's overlook now !
 			</p>
 		@endif
 		<div class="search-area">

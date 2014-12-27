@@ -23,8 +23,8 @@
 			<nav>
 		        <ul class="navigation-menu">
 		            <li><a href="/about">About</a></li>
-		            <li><a href="#0">Contact us</a></li>
-		            <li><a href="#0">API documentation</a></li>
+		            <li><a href="mailto:contact@chronicler.info">Contact us</a></li>
+		            <!-- <li><a href="#0">API documentation</a></li> -->
 		        </ul>
 		    </nav>
 		</article>
@@ -34,4 +34,3 @@
 		<div class="loading hidden"><img src="/images/common/ui/loading.gif"></div>
 	</body>
 </html>
-

@@ -13,8 +13,8 @@ return array(
 	|
 	*/
 
-	'debug' => true, 
+	'debug' => false, 
 
-	'url' => 'localhost'
+	'url' => 'chronicler.info'
 
 );
