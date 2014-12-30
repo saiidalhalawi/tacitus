@@ -8,6 +8,7 @@ class PeopleController extends \AdminBaseController {
 
     public function __construct(){
         View::share('PERSON_TYPES', Config::get('person_type.types'));
+        parent::__construct();
     }
 
 	/**

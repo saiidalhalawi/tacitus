@@ -26,11 +26,13 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('homestead'), 
-	'production' => array('tacitus.chronicler.info'),
-));
+$env = $app->detectEnvironment(function() {
+	if (file_exists(__DIR__ . '/../.local.php')) {
+		return 'local';
+	} else {
+		return 'production';
+	}
+});
 
 /*
 |--------------------------------------------------------------------------

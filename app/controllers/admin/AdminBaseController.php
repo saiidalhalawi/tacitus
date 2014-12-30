@@ -12,4 +12,11 @@ class AdminBaseController extends BaseController
 {
 
     public $layout = 'ancestors.admin.base';
+
+    public function __construct(){
+        if(strcmp(App::environment(), 'production') == 0){
+        	// 本番アクセス禁止
+        	return Redirect::intended("/");
+        }
+    }
 }

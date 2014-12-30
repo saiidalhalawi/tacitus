@@ -3,7 +3,7 @@ function BarController(timelineScale){
 	this.startYear = timelineScale.startYear;
 	this.endYear = timelineScale.endYear;
 	this.scale = timelineScale;
-	this.peopleCountLimit = 30;
+	this.peopleCountLimit = 50;
 	this.verticalMargin = 45;
 }
 
