@@ -16,7 +16,8 @@ class AdminBaseController extends BaseController
     public function __construct(){
         if(App::environment('production')){
         	// 本番アクセス禁止
-        	return Redirect::intended("/");
+        	header('Location: /');
+			exit();
         }
     }
 }

@@ -1,3 +1,7 @@
+/**
+ * Ajaxのコントロールクラス
+ * 
+ */
 function AjaxHandler(){
 	this.url = null;
 	this.type = 'POST';
@@ -10,6 +14,9 @@ function AjaxHandler(){
 	};
 }
 
+/**
+ * Ajaxのコール
+ */
 AjaxHandler.prototype.call = function(){
 
 	$.ajax({

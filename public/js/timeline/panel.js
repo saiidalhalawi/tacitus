@@ -1,11 +1,6 @@
 function TimelinePanel(){
 	this.currentId = null;
-	this.init();
 	this.states = {};
-}
-
-TimelinePanel.prototype.init = function(){
-
 }
 
 TimelinePanel.prototype.createPersonDetail = function(bar){

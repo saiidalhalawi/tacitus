@@ -49,6 +49,16 @@ i:before {
   display: none;
 }
 
+.quote-line {
+  font-size: 1.75rem;
+  font-style: italic;
+  text-align: left;
+}
+.quote-from {
+  font-size: 1.5rem;
+  float: right;
+}
+
 ::-webkit-scrollbar {
   width: 0.75rem;
 }
@@ -369,19 +379,17 @@ div.title-on-header a:active {
 	position: fixed;
 	left: 30%;
 	top: 30%;
-}
-#pageTitle h1,
-#pageTitle p {
-	color: #fff;
-	text-align: center;
-
+  color: #fff;
 }
 #pageTitle h1 {
-	font-size: 3.5rem;
+  color: #fff;
+  text-align: center;
+  font-size: 3.5rem;
 }
 #pageTitle p {
 	font-size: 2rem;
 	font-weight: lighter;
+  margin-bottom: 3.5rem;
 }
 
 .static-content {

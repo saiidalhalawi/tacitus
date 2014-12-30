@@ -1,3 +1,9 @@
+/**
+ * 画面操作オブジェクト
+ *
+ * @param {Integer} from 開始年
+ * @param {Integer} to   終了年
+ */
 function Manipulator(from, to){
 	this.from = from;
 	this.to = to;
@@ -9,6 +15,10 @@ function Manipulator(from, to){
 	this.peopleAjaxObj = new AjaxHandler();
 }
 
+/**
+ * Intializer
+ *
+ */
 Manipulator.prototype.init = function(){	
 	var	barController = this.barController;
 	this.peopleAjaxObj.url = '/rest/'+lang+'/search/people';
@@ -24,6 +34,10 @@ Manipulator.prototype.init = function(){
 	this.peopleAjaxObj.call();
 }
 
+/**
+ * タイムラインの前後への移動
+ *
+ */
 Manipulator.prototype.move = function(){	
 	var	barController = this.barController;
 	this.peopleAjaxObj.data.from = this.from * 10000;
@@ -41,7 +55,7 @@ $(function() {
 
 	$('#timebox').dragScroll({});
 
-	// ページの移動
+	// 前ページの移動
 	$('.vector.prev').on('click', function(){
 		manipulatorObj.from -= manipulatorObj.durationAmount;
 		manipulatorObj.to -= manipulatorObj.durationAmount;
@@ -53,6 +67,7 @@ $(function() {
 		manipulatorObj.move();
 		*/
     });
+    // 次ページの移動
     $('.vector.next').on('click', function(){
 		manipulatorObj.from += manipulatorObj.durationAmount;
 		manipulatorObj.to += manipulatorObj.durationAmount;
