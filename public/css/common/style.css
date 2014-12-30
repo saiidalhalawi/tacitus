@@ -536,6 +536,11 @@ input.searchBox.thin {
   position: absolute;
   cursor: pointer;
 }
+.bar:hover {
+  opacity: 0.8;
+  z-index: 200;
+}
+
 .bar.person {
   font-style: oblique;
   text-align: center;
