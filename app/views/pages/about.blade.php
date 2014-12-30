@@ -34,6 +34,8 @@
 				<li>
 					Our team still feeds various information like people, states, <br>
 					historical events, or inventions.<br>
+				</li>
+				<li>
 					We need your help, thank you.
 				</li>
 				<li> - Team Chronicler</li>

@@ -16,9 +16,6 @@
 <script src="/js/timeline/panel.js"></script>
 <script src="/js/bar/controller.js"></script>
 <script src="/js/timeline/manipulator.js"></script>
-@stop
-
-<title>@section('title')Chronicler</title>
 
 <script>
     @if(!empty($keywords))
@@ -45,6 +42,9 @@
     }, 
         lang = '{{{ $lang }}}';
 </script>
+@stop
+
+<title>@section('title')Chronicler</title>
 
 @section('body')
 

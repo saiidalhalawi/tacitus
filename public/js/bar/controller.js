@@ -1,5 +1,11 @@
+/**
+ * データ表示用コントローラ
+ *
+ * @param {Object} TimelineScaleオブジェクト
+ */
 function BarController(timelineScale){
 	this.bars = [];
+	// durationレンジ
 	this.startYear = timelineScale.startYear;
 	this.endYear = timelineScale.endYear;
 	this.scale = timelineScale;
@@ -7,6 +13,12 @@ function BarController(timelineScale){
 	this.verticalMargin = 45;
 }
 
+/**
+ * 人物データをバーに当てこむ
+ * 
+ * @param {json Object} 人物データ
+ * @return none
+ */
 BarController.prototype.setBars = function(people){
 
 	var controller = this, 
@@ -46,6 +58,7 @@ BarController.prototype.setBars = function(people){
 			tmpSurvivalTime += '?';
 		}
 
+		// データをdiv内各要素にセットする
 		tooltip = '<i class="name-on-bar">'+currPerson.name+'</i>';
 		tmpBar = $('<div class="bar person state-'+currPerson.state_id+' " data-name="'
 						+currPerson.name+'" data-title="'
@@ -72,7 +85,3 @@ BarController.prototype.setBars = function(people){
 	});
 }
 
-BarController.prototype.showDetail = function(id){
-
-
-}

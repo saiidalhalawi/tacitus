@@ -14,16 +14,21 @@
 	<section id="pageTitle">
 		<h1>Chronicler</h1>
 		@if($lang == 'ja')
-			<p>世界の歴史を視覚化<br>とりあえず眺めてみよう！</p>
+			<p>
+				<q class="quote-line">人間は世界史の重要な担い手であって、<br>世界史は人類の運命の集合から生ずる。</q><br>
+				<span class="quote-from">- フランツ・ブレンターノ</span>
+			</p>
 		@else
 			<p>
-				You can visualize the World History.<br>
-				Let's overlook now !
+				<quote class="quote-line">
+					&ldquo;The souls of emperors and cobblers<br> are cast in the same mold.&rdquo;
+				</quote><br>
+				<span class="quote-from">- Michel de Montaigne</span>
 			</p>
 		@endif
 		<div class="search-area">
 			<form name="searchOnTop" action="/timeline" method="GET">
-			    <input type="text" name="k" class="searchBox fl" placeholder="Find Stuff" required>
+			    <input type="text" name="k" class="searchBox fl" placeholder="Enter yyyy or yyyymmdd you like" required>
 			    <a onclick="document.forms.searchOnTop.submit();" href="#" class="btn fl mlrem">Search</a>
 			    @if($lang == 'ja')
 					<select class="lang-selection" onchange="javascript:location.href = this.value;">
@@ -33,7 +38,7 @@
 					</select>
 				@else
 					<select class="lang-selection" onchange="javascript:location.href = this.value;">
-						<option value="">Select your Language</option>
+						<option value="">Choose your Language</option>
 						<option value="/?lang=en">English</option>
 						<option value="/?lang=ja">Japanese</option>
 					</select>
