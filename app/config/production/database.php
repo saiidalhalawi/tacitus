@@ -22,7 +22,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
+			'host'      => 'mysql1003.xserver.jp',
 			'database'  => 'tacitus_tacitus',
 			'username'  => 'tacitus_user',
 			'password'  => 'tacitus123',
