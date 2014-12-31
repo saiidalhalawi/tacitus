@@ -1,5 +1,14 @@
 @extends('ancestors.base')
 
+@section('meta')
+    @if($lang == 'ja')
+        <meta name="keywords" content="世界史,歴史,生没年,年号,年表,世界,世紀,タイムライン">
+        <meta name="description" content="世界の歴史をタイムラインで視覚化。">
+    @else
+        <meta name="keywords" content="A.D, B.C,world history,history,timeline,biography,surviving time">
+        <meta name="description" content="Overlook the World History. We can view that via timeline.">
+    @endif
+@stop
 
 <title>@section('title')Chronicler</title>
 
