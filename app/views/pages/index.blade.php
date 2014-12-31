@@ -45,6 +45,8 @@
 				@endif
 			    
 		    </form>
+
+		    @include('includes.social_buttons')
 		</div>
 	</section>
 @stop
