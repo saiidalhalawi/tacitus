@@ -69,7 +69,6 @@ BarController.prototype.setBars = function(people){
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 
-							'margin' : '1.5rem 0', 
 							'top' : idx * controller.verticalMargin
 						})
 					.attr('person_id', currPerson.id)
