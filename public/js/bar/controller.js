@@ -65,7 +65,7 @@ BarController.prototype.setBars = function(people){
 						+currPerson.title+'" data-live="'
 						+tmpSurvivalTime+'" data-state="'
 						+currPerson.state_id+'" data-explain="'
-						+escapeQ(currPerson.explanation)+'">&nbsp;</div>')
+						+nl2br(escapeQ(currPerson.explanation))+'">&nbsp;</div>')
 					.css({
 							'left' : currPerson.xStart, 
 							'width' : currPerson.width, 

@@ -25,6 +25,12 @@ body {
   color: rgba(2, 23, 37, 0.7);
   -webkit-text-size-adjust: 100%;
 }
+@media screen and (max-width : 670px) {
+  body {
+    font-family: Helvetica, sans-serif;
+  }
+}
+
 body.overflow-hidden {
   /* when primary navigation is visible, the content in the background won't scroll */
   overflow: hidden;
@@ -352,6 +358,11 @@ div.title-on-header a:active {
   height: 65%;
   margin: 1rem;
 }
+@media only screen and (min-width: 1170px) {
+  .search-area form {
+    margin: 0 !important;
+  }
+}
 
 .lang-selection {
   border: 0 !important;
@@ -366,7 +377,7 @@ div.title-on-header a:active {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(23, 21, 39, 0.52) !important;
   text-shadow: 1px 1px #222;
-  width: 11.5rem;
+  width: 13.5rem;
 }
 .lang-selection:hover {
   box-shadow: inset 0 0 5px rgba(5, 5, 5, 0.75);
@@ -398,16 +409,22 @@ div.title-on-header a:active {
 	font-weight: lighter;
   margin-bottom: 3.5rem;
 }
-@media screen and (max-width : 670px) {
+@media screen and (max-width : 1020px) {
   #pageTitle {
     left: 15%;
     top: 25%;
   }
 }
-@media screen and (max-width : 580px) {
+@media screen and (max-width : 740px) {
+  #pageTitle {
+    left: 20%;
+    top: 0%;
+  }
+}
+@media screen and (max-width : 420px) {
   #pageTitle {
     left: 5%;
-    top: 20%;
+    top: 15%;
   }
 }
 
@@ -726,5 +743,14 @@ input.searchBox.thin {
   float: right;
   font-size: 1.5rem;
   margin: 1rem;
+}
+
+#social-box {
+  display:table;
+  padding:0 0 0 2px;
+}
+#social-box>div {
+  float: left;
+  margin: 5px 2px;
 }
 /* -UI petterns- */

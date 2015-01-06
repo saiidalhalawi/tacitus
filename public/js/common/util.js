@@ -8,6 +8,9 @@ function dateFormat(date){
             + ':' + ('0' + date.getMinutes()).slice(-2);
 }
 
+function nl2br(txt){
+	return txt.replace(/(\r\n|\n\r|\r|\n)/g, "<br>");
+};
 
 function escapeQ(text){
 	return text.replace(/\"/g,'&quot;');
