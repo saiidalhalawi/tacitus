@@ -8,6 +8,14 @@
         <meta name="keywords" content="A.D, B.C,world history,history,timeline,biography,surviving time">
         <meta name="description" content="Overlook the World History. We can view that via timeline.">
     @endif
+
+	<!--
+		////////////////////////////////////////////////
+		//    Present For My Dearest Little Brother.  //
+		//     Masato                                 //
+		//     April 1989  -  January 2015            //
+		////////////////////////////////////////////////
+	-->
 @stop
 
 <title>@section('title')Chronicler</title>
